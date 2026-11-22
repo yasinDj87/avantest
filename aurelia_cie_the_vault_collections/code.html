@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffe088", "error-container": "#93000a", "on-primary-fixed": "#241a00", "surface-variant": "#343538", "secondary-fixed": "#dde3eb", "on-tertiary": "#3d2e00", "secondary-container": "#41474e", "surface-container": "#1f1f23", "inverse-primary": "#735c00", "secondary-fixed-dim": "#c1c7cf", "on-secondary-fixed-variant": "#41474e", "tertiary-fixed-dim": "#e4c36a", "primary-container": "#d4af37", "primary-fixed-dim": "#e9c349", "outline": "#99907c", "on-surface-variant": "#d0c5af", "outline-variant": "#4d4635", "on-tertiary-fixed": "#241a00", "tertiary": "#edcb71", "on-secondary-container": "#afb6bd", "surface-tint": "#e9c349", "on-primary": "#3c2f00", "on-background": "#e3e2e6", "surface-container-low": "#1b1b1f", "background": "#121316", "on-error-container": "#ffdad6", "on-error": "#690005", "on-primary-container": "#554300", "error": "#ffb4ab", "tertiary-fixed": "#ffe08f", "tertiary-container": "#d0b059", "on-tertiary-container": "#574300", "on-secondary": "#2b3137", "on-tertiary-fixed-variant": "#584400", "surface-dim": "#121316", "surface-bright": "#38393c", "on-secondary-fixed": "#161c22", "on-surface": "#e3e2e6", "inverse-on-surface": "#2f3034", "primary": "#f2ca50", "secondary": "#c1c7cf", "inverse-surface": "#e3e2e6", "surface": "#121316", "surface-container-highest": "#343538", "surface-container-lowest": "#0d0e11", "on-primary-fixed-variant": "#574500", "surface-container-high": "#292a2d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "3rem", "gutter": "1.5rem", "space-lg": "1.75rem", "margin": "4rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "display-hero": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "body-md": [ "Inter" ], "headline-lg-mobile": [ "Playfair Display" ], "body-sm": [ "Inter" ], "title-editorial": [ "Playfair Display" ], "caption-caps": [ "Inter" ], "headline-lg": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "body-lg": [ "Inter" ], "display-hero-mobile": [ "Playfair Display" ], "technical-label": [ "Space Grotesk" ] }, "fontSize": { "display-hero": [ "4.5rem", { "lineHeight": "5rem", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-sm": [ "1.5rem", { "lineHeight": "2rem", "fontWeight": "500" } ], "body-md": [ "0.9375rem", { "lineHeight": "1.6rem", "fontWeight": "400" } ], "headline-lg-mobile": [ "2rem", { "lineHeight": "2.5rem", "fontWeight": "400" } ], "body-sm": [ "0.8125rem", { "lineHeight": "1.375rem", "fontWeight": "400" } ], "title-editorial": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "caption-caps": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.2em", "fontWeight": "600" } ], "headline-lg": [ "3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-md": [ "2.25rem", { "lineHeight": "2.75rem", "fontWeight": "400" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.875rem", "fontWeight": "300" } ], "display-hero-mobile": [ "2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "technical-label": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.15em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-2xl border-b border-primary/20 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"><div class="w-full bg-surface-container-lowest border-b border-outline-variant/30 py-1.5 px-4 text-center"><p class="font-caption-caps text-caption-caps text-on-surface-variant uppercase">COMPLIMENTARY SECURE INSURED GLOBAL WHITE-GLOVE COURIER DELIVERY ON ALL TIMEPIECES</p></div><div class="h-20 max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-4 shrink-0"><img alt="AURELIA &amp; CIE Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDWyoCrlAXoG3ohyeepdOX4PHIAbySNK-CsOj1IAOwFFrrcE2IudVr916zDNz6mPT0nPtLEMlDbPV9u-sE2ZECNXdagS1WljIS1_vHH_-ypSKNxdXMTQnPxqbskv_XPr6v2DgIQJzZMVMhE8m_z2zsHY-PxQR-Va_86muqUFSSZEHhmcflO92Qplxbuq521xy_aUujQdMt9kf5fMPidD0BoFUjxXA9-JAJoJgDKKiffVw"/><a class="flex flex-col text-left" data-path="home" href="#"><span class="font-title-editorial text-title-editorial uppercase tracking-[0.25em] text-on-surface">Aurelia &amp; Cie</span><span class="font-technical-label text-technical-label text-primary uppercase">Haute Horlogerie Genève</span></a></div><nav class="hidden xl:flex items-center gap-8" data-active-classes="text-primary border-b border-primary pb-1"><a aria-current="page" class="font-technical-label transition-colors uppercase text-primary border-b border-primary pb-1" data-path="collections" href="#">Collections</a><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="grand-complications" href="#">Grand Complications</a><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="bespoke-atelier" href="#">Bespoke Atelier</a><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="heritage" href="#">Heritage</a><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="boutiques" href="#">Boutiques</a></nav><div class="flex items-center gap-5 shrink-0"><div class="hidden md:flex items-center bg-surface-container-low/70 border border-outline-variant/40 rounded px-3 py-1.5 focus-within:border-primary transition-colors"><span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span><input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none w-36 lg:w-44" placeholder="Concierge Search..." type="text"/></div><div class="flex items-center gap-1 font-technical-label text-technical-label text-on-surface-variant"><span class="text-primary cursor-pointer">CHF</span><span class="text-outline-variant">/</span><span class="hover:text-on-surface cursor-pointer transition-colors">USD</span><span class="text-outline-variant">/</span><span class="hover:text-on-surface cursor-pointer transition-colors">EUR</span></div><a class="relative p-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="absolute top-0 right-0 w-3.5 h-3.5 bg-primary text-on-primary font-technical-label text-[9px] rounded-full flex items-center justify-center font-bold">1</span></a><a class="flex items-center gap-1.5 bg-surface-container-high/60 border border-outline-variant/50 hover:border-primary/50 px-3 py-1.5 rounded transition-colors" data-path="shopping-vault" href="#"><span class="material-symbols-outlined text-[18px] text-primary">lock</span><span class="font-technical-label text-technical-label text-on-surface uppercase">Vault (2)</span></a><div class="flex items-center pl-2 border-l border-outline-variant/50"><a class="flex items-center" data-path="vip-portal" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-primary/40 hover:border-primary transition-colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGw-C29gnBIbdSw_FhCynAxMpGXaxduoLNdvFeI1dmDnPlFiM7KCNAdubVHJIDawwnA_1GXapyQyF8kyfKqLiAixlUBrZuX6CBVoLH6oyUKKLjgWI2dGHwbm1Z86RkPDmM645OmTTCczMBWhB4bU9H7xfAVwCkXPiSB1yz5bRw89pfCBAw2ZAePcbVOZdEdwGdXRdMbwtmHlQnYa4ueMSqvGMEpUDxQtaF2CEHjdKG"/></a></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Atmospheric Glow & Header Section -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest py-16 px-6 lg:px-12">
+<!-- Subtle ambient backlight -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-primary/10 via-primary/0 to-transparent blur-3xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-3xl space-y-4">
+<div class="flex items-center gap-3">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-caption-caps text-caption-caps uppercase text-primary tracking-widest">Geneva Atelier Allocations</span>
+<span class="text-outline-variant font-technical-label text-technical-label">•</span>
+<span class="font-technical-label text-technical-label text-on-surface-variant uppercase tracking-wider">Edition 2024 / 2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          THE VAULT — <span class="italic font-display-hero text-primary">PERMANENT &amp; LIMITED COLLECTIONS</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-light">
+          Explore rare grand complications, skeletonized tourbillons, and sports chronographs hand-assembled in Geneva. Each reference is subject to stringent chronometric validation and marked by the prestigious Poinçon de Genève.
+        </p>
+</div>
+<!-- Live Vault Status Module -->
+<div class="bg-surface-container-low/90 backdrop-blur-md px-6 py-5 rounded-lg border-none shadow-xl flex flex-col gap-2 min-w-[280px]">
+<div class="flex items-center justify-between">
+<span class="font-caption-caps text-caption-caps uppercase text-primary tracking-wider">Vault Inventory Status</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+</div>
+<div class="flex items-baseline gap-2 pt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">18</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Timepieces Available</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full rounded-full w-[78%]"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-1">
+<span class="font-technical-label text-technical-label uppercase text-primary">4 Allocated Worldwide</span>
+<span class="font-technical-label text-technical-label">14 UNCOMMITTED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Controls, Pill Filtering & Material Matrix -->
+<section class="w-full bg-surface-container-low py-6 px-6 lg:px-12 sticky top-20 z-30 backdrop-blur-xl shadow-lg">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-5">
+<!-- Complication Filter Pills -->
+<div class="flex items-center justify-between gap-4 overflow-x-auto pb-1 scrollbar-none">
+<div class="flex items-center gap-2 shrink-0" id="category-filters">
+<button class="filter-pill bg-primary text-on-primary font-technical-label text-technical-label px-5 py-2 uppercase tracking-widest shadow-sm rounded-sm transition-all duration-200" type="button">
+            All Timepieces (18)
+          </button>
+<button class="filter-pill bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-technical-label text-technical-label px-5 py-2 uppercase tracking-widest rounded-sm transition-all duration-200" type="button">
+            Tourbillons (5)
+          </button>
+<button class="filter-pill bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-technical-label text-technical-label px-5 py-2 uppercase tracking-widest rounded-sm transition-all duration-200" type="button">
+            Perpetual Calendars (4)
+          </button>
+<button class="filter-pill bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-technical-label text-technical-label px-5 py-2 uppercase tracking-widest rounded-sm transition-all duration-200" type="button">
+            Flyback Chronographs (6)
+          </button>
+<button class="filter-pill bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-technical-label text-technical-label px-5 py-2 uppercase tracking-widest rounded-sm transition-all duration-200" type="button">
+            Skeletonized (3)
+          </button>
+</div>
+<!-- View Mode Switcher -->
+<div class="hidden lg:flex items-center bg-surface-container-highest/60 p-1 rounded-sm shrink-0">
+<button class="p-1.5 bg-primary text-on-primary rounded-sm transition-colors" id="view-grid-btn" title="Gallery Grid" type="button">
+<span class="material-symbols-outlined text-[18px] block">grid_view</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded-sm transition-colors" id="view-table-btn" title="Technical Spec Sheet" type="button">
+<span class="material-symbols-outlined text-[18px] block">view_list</span>
+</button>
+</div>
+</div>
+<!-- Secondary Spec Bar: Metal & Case Materials + Sorting -->
+<div class="flex flex-wrap items-center justify-between gap-4 pt-3 border-t-0 bg-surface-container-high/40 p-3 rounded-md">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-caption-caps text-caption-caps text-outline uppercase pr-2">Case Metallurgy:</span>
+<button class="material-tag px-3 py-1 bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label rounded-sm uppercase tracking-wider transition-colors">
+            18k Rose Gold
+          </button>
+<button class="material-tag px-3 py-1 bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label rounded-sm uppercase tracking-wider transition-colors">
+            Platinum 950
+          </button>
+<button class="material-tag px-3 py-1 bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label rounded-sm uppercase tracking-wider transition-colors">
+            Forged Carbon
+          </button>
+<button class="material-tag px-3 py-1 bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label rounded-sm uppercase tracking-wider transition-colors">
+            Grade 5 Titanium
+          </button>
+<button class="material-tag px-3 py-1 bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label rounded-sm uppercase tracking-wider transition-colors">
+            Smoked Sapphire
+          </button>
+</div>
+<div class="flex items-center gap-3 ml-auto">
+<span class="font-caption-caps text-caption-caps text-outline uppercase">Curated Sort:</span>
+<div class="relative inline-block">
+<select class="appearance-none bg-surface-container-lowest text-on-surface font-technical-label text-technical-label uppercase px-4 py-2 pr-8 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer shadow-inner">
+<option>Curated by Rarity</option>
+<option>Price: High to Low</option>
+<option>Complication Complexity</option>
+<option>New Releases (Geneva 2024)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-primary text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Grid Display Mode -->
+<section class="w-full max-w-[1440px] mx-auto px-6 lg:px-12 py-16" id="gallery-container">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- CARD 1: Chrono-Tourbillon 41mm (Flagship Showcase with Micro-interactions) -->
+<article class="group relative bg-surface-container-low rounded-lg p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden" data-watch-id="ref-8800">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="space-y-4">
+<!-- Metadata Bar -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-primary/10 text-primary font-technical-label text-technical-label uppercase rounded-sm">Limited Edition 25 pcs</span>
+<span class="px-2 py-1 bg-surface-container-highest text-on-surface font-caption-caps text-caption-caps uppercase rounded-sm">Poinçon de Genève</span>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors" title="Compare Reference">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</button>
+</div>
+<!-- Watch Image Container with Luminescent Toggle Simulation -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex items-center justify-center p-6 group/img">
+<img alt="AURELIA Chrono-Tourbillon 41mm" class="w-full h-full object-contain filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.8)] transition-all duration-700 group-hover:scale-105" data-alt="Exquisite macro studio photograph of the Aurelia Chrono-Tourbillon 41mm luxury mechanical wristwatch with an 18k rose gold case, openworked dial revealing golden escapement gears, flying tourbillon cage at 6 o'clock, charcoal sunburst subdials, and black hand-stitched alligator leather strap resting on dark textured slate under surgical dramatic rim lighting." id="watch-img-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABxlPO4EGGGGWN7Opv7ac4Xvzo3O1MQx0c3Xnt1KPztSmrI6X8aN2G4t7wGE_tAs53Q-9_j3qTI5LCYWsfzO85z2WtSW9BLmB0_br8QZYKboV2OXaBMM47mWQ2j3kWCs3eC6fAm8I5tujvvuuzJVq3V9BXGXud_yX2Ae2o3I11H4BX0w7dNbQJxk_S4mDaAN6gHUPDFP58qkyDRehUaMsbgailtqjEb1H7mY6QwfHX"/>
+<!-- Night View Luminescence Indicator -->
+<button class="absolute bottom-3 right-3 bg-surface-container-high/80 backdrop-blur-md p-2 rounded-full hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors shadow-lg" onclick="toggleLume(1)" title="Toggle Super-LumiNova View" type="button">
+<span class="material-symbols-outlined text-[16px] block">bedtime</span>
+</button>
+<!-- Angle Switcher Mini Controls -->
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 bg-surface-container-high/80 backdrop-blur-md px-2 py-1 rounded-sm">
+<button class="font-caption-caps text-caption-caps text-primary hover:underline uppercase px-1">Dial</button>
+<span class="text-outline-variant text-[10px]">|</span>
+<button class="font-caption-caps text-caption-caps text-on-surface-variant hover:text-on-surface uppercase px-1">Calibre</button>
+<span class="text-outline-variant text-[10px]">|</span>
+<button class="font-caption-caps text-caption-caps text-on-surface-variant hover:text-on-surface uppercase px-1">Profile</button>
+</div>
+</div>
+<!-- Chronometric Specs & Title -->
+<div class="space-y-2 pt-2">
+<div class="flex items-center justify-between text-outline">
+<span class="font-technical-label text-technical-label uppercase tracking-widest">REF. AC-8800-OR</span>
+<span class="font-technical-label text-technical-label uppercase">41 MM • 72H RESERVE</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">
+              AURELIA Chrono-Tourbillon 41mm
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Bespoke flying minute tourbillon paired with a column-wheel lateral clutch chronograph. Cased in proprietary 18k Rose Gold with sapphire aperture.
+            </p>
+</div>
+<!-- Complication Badges Matrix -->
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Calibre 8800 Manual</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">21,600 vph</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">30m Water Resistance</span>
+</div>
+</div>
+<!-- Acquisition Action & Valuation -->
+<div class="pt-6 mt-6 border-t-0 space-y-4">
+<div class="flex items-baseline justify-between">
+<span class="font-caption-caps text-caption-caps uppercase text-outline">Atelier Valuation</span>
+<span class="font-headline-sm text-headline-sm text-primary font-medium tracking-tight">$124,000</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm shadow-md transition-all font-medium text-center" type="button">
+              Reserve Piece
+            </button>
+<button class="w-full bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm transition-all text-center flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Vault Bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 2: Royal Skeleton Diver 42mm -->
+<article class="group relative bg-surface-container-low rounded-lg p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden" data-watch-id="ref-4100">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-surface-container-high text-secondary font-technical-label text-technical-label uppercase rounded-sm">Grade 5 Titanium</span>
+<span class="px-2 py-1 bg-surface-container-highest text-on-surface font-caption-caps text-caption-caps uppercase rounded-sm">ISO 6425 Deep Diver</span>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors" title="Compare Reference">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</button>
+</div>
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex items-center justify-center p-6">
+<img alt="AURELIA Royal Skeleton Diver 42mm" class="w-full h-full object-contain filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.8)] transition-all duration-700 group-hover:scale-105" data-alt="Technical high-fashion photograph of the Aurelia Royal Skeleton Diver 42mm luxury wristwatch crafted from matte sandblasted Grade 5 Titanium with a fully skeletonized titanium movement, deep navy blue ceramic unidirectional rotating bezel, luminous geometric markers, and integrated titanium link bracelet with micro-adjustment clasp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkV9DhPRiElWspC4NvuvaZtbVnozVE5EZstK7v7LviAINNPF70V9U4t0g3vXCyz7_lAU3eVvcm2P5H79Q0c6G_1dgxV3AfIc2-_mcv5qtg1VYQvYjILRTqYKlp-q0N5oXXeoRg15djpxsahUf68suBzWwPmEfaodiAorDYrbJ4O2pYfKIH5jk3k6nEoIwRA04wDEyFNKwDk1wN5LV8XKPwrAh_EnKFfoNXjIrw4pIB"/>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 bg-surface-container-high/80 backdrop-blur-md px-2 py-1 rounded-sm">
+<span class="font-caption-caps text-caption-caps text-on-surface-variant uppercase">300M / 1,000FT HELIUM ESCAPE</span>
+</div>
+</div>
+<div class="space-y-2 pt-2">
+<div class="flex items-center justify-between text-outline">
+<span class="font-technical-label text-technical-label uppercase tracking-widest">REF. AC-4100-SK</span>
+<span class="font-technical-label text-technical-label uppercase">42 MM • 30 ATM</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">
+              AURELIA Royal Skeleton Diver 42mm
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Surgical skeletonization meets extreme professional abyssal depth ratings. Ultra-lightweight aerospace grade 5 titanium monobloc architecture.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Calibre AC-92 Automatic</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Silicon Escapement</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Ceramic Bezel</span>
+</div>
+</div>
+<div class="pt-6 mt-6 border-t-0 space-y-4">
+<div class="flex items-baseline justify-between">
+<span class="font-caption-caps text-caption-caps uppercase text-outline">Atelier Valuation</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium tracking-tight">$68,000</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm shadow-md transition-all font-medium text-center" type="button">
+              Reserve Piece
+            </button>
+<button class="w-full bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm transition-all text-center flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Vault Bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 3: Celestial Moonphase Perpetual (Piece Unique) -->
+<article class="group relative bg-surface-container-low rounded-lg p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden" data-watch-id="ref-9900">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-primary-fixed-dim/20 text-primary-fixed font-technical-label text-technical-label uppercase rounded-sm">Pièce Unique 1/1</span>
+<span class="px-2 py-1 bg-surface-container-highest text-on-surface font-caption-caps text-caption-caps uppercase rounded-sm">Platinum 950</span>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors" title="Compare Reference">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</button>
+</div>
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex items-center justify-center p-6">
+<img alt="AURELIA Celestial Moonphase Perpetual" class="w-full h-full object-contain filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.8)] transition-all duration-700 group-hover:scale-105" data-alt="Museum-grade horological hero portrait of the Aurelia Celestial Moonphase Perpetual Calendar watch, heavy Solid Platinum 950 case, authentic Gibeon meteorite etched Widmanstätten pattern dial, high-detail gold repoussé spherical astronomical moonphase aperture, fine leaf hands, midnight blue alligator strap on obsidian black pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA305uEzNy3ZfuZ5GTGLWK88ykD5EG9qXNWHTeNZhAiCAmivMz6uSZmjchw17OcplWgzI5gH2atm_7DvqTHpIcO5GY-yjZb8XZH_fsqjgTSv-e94z00Z1I5PTfnx0kWQRt8Q_ntdpepBIzsA_VhyGvNX_FtjOjkthscoqcC5Sbowt3OkysKEtwjzXIm9c9EiawmLzgPs4wqotEJVoa4941GIaMQD9tYvKg8TqXO7oNq"/>
+<div class="absolute top-3 right-3 bg-primary text-on-primary font-technical-label text-[9px] uppercase px-2 py-0.5 rounded tracking-widest font-semibold shadow">
+              Vault Allocation
+            </div>
+</div>
+<div class="space-y-2 pt-2">
+<div class="flex items-center justify-between text-outline">
+<span class="font-technical-label text-technical-label uppercase tracking-widest">REF. AC-9900-ASTRO</span>
+<span class="font-technical-label text-technical-label uppercase">40 MM • METEORITE DIAL</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">
+              AURELIA Celestial Moonphase Perpetual
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Secular perpetual calendar accurate to 122 years without adjustment. Dials sliced from genuine Namibian Gibeon iron meteorite with hand-lacquered moon disc.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Calibre 990QP</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Platinum Micro-Rotor</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Astronomical Moon</span>
+</div>
+</div>
+<div class="pt-6 mt-6 border-t-0 space-y-4">
+<div class="flex items-baseline justify-between">
+<span class="font-caption-caps text-caption-caps uppercase text-outline">Atelier Valuation</span>
+<span class="font-headline-sm text-headline-sm text-primary font-medium tracking-tight">$195,000</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm shadow-md transition-all font-medium text-center" type="button">
+              Request Dossier
+            </button>
+<button class="w-full bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm transition-all text-center flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Vault Bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 4: Forged Carbon Flyback -->
+<article class="group relative bg-surface-container-low rounded-lg p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden" data-watch-id="ref-5500">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-surface-container-high text-secondary font-technical-label text-technical-label uppercase rounded-sm">Forged Carbon NTPT</span>
+<span class="px-2 py-1 bg-surface-container-highest text-on-surface font-caption-caps text-caption-caps uppercase rounded-sm">Ultralight 58g</span>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors" title="Compare Reference">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</button>
+</div>
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex items-center justify-center p-6">
+<img alt="AURELIA Forged Carbon Flyback" class="w-full h-full object-contain filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.8)] transition-all duration-700 group-hover:scale-105" data-alt="Editorial product shot of the Aurelia Forged Carbon Flyback luxury sports chronograph watch, marbled forged carbon composite case with unique swirling grey-black grain patterns, bright racing-gold chronograph hands, tachymeter scale inner flange, skeleton date disc, black vulcanized FKM rubber strap against soft charcoal backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqI5yZmPf-Y4LdkRyy2LwfeBZA_g1xhOEwrcQfwTizGZVnk4mL0qThR_OdWyuMfONJDidy1GcjtO7uJ3BRxEvXXRIaDdjTBeisrnvMH1DEzEm6TjIesmKmasJmca40IRaH2mZ2fK7TB-vWWomv2oeUumlfCKSiXq8jK8NsjfLg2hEqctpy6xFHwSGZ1gLwXEGVG2YFQGZEXSsss8mZHjkSyI5vcemYMfOJyozX5UJb"/>
+</div>
+<div class="space-y-2 pt-2">
+<div class="flex items-center justify-between text-outline">
+<span class="font-technical-label text-technical-label uppercase tracking-widest">REF. AC-5500-CRB</span>
+<span class="font-technical-label text-technical-label uppercase">43 MM • CHRONO FLYBACK</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">
+              AURELIA Forged Carbon Flyback
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Instantaneous flyback chronograph mechanism designed for track telemetry. Cased in high-density compressed carbon matrix with DLC titanium pushers.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Calibre CF-12 In-House</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">4Hz High Beat</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">FKM Natural Rubber</span>
+</div>
+</div>
+<div class="pt-6 mt-6 border-t-0 space-y-4">
+<div class="flex items-baseline justify-between">
+<span class="font-caption-caps text-caption-caps uppercase text-outline">Atelier Valuation</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium tracking-tight">$84,500</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm shadow-md transition-all font-medium text-center" type="button">
+              Reserve Piece
+            </button>
+<button class="w-full bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm transition-all text-center flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Vault Bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 5: Monopusher Chronograph -->
+<article class="group relative bg-surface-container-low rounded-lg p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden" data-watch-id="ref-7200">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-surface-container-high text-secondary font-technical-label text-technical-label uppercase rounded-sm">18k White Gold</span>
+<span class="px-2 py-1 bg-surface-container-highest text-on-surface font-caption-caps text-caption-caps uppercase rounded-sm">Grand Feu Enamel</span>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors" title="Compare Reference">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</button>
+</div>
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex items-center justify-center p-6">
+<img alt="AURELIA Monopusher Chronograph" class="w-full h-full object-contain filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.8)] transition-all duration-700 group-hover:scale-105" data-alt="Exacting close-up photograph of the Aurelia Monopusher Chronograph luxury timepiece, shimmering 18k white gold stepped case, pristine vitreous pure white Grand Feu enamel dial, flame-blued Breguet numerals and feuille hands, single coaxial pusher integrated into the winding crown, hand-stitched tan calfskin strap." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqCi6mh10uG7MP67f4FCKdK5XUImCRsfOeTR1lFLQHBOtm3E1sktVsT-dvGY1pB-YksH8UCpjq4fps5BIYAMfP1v7DXU-TBlMGQTVg61amJWmluIGdfHnsiGiGbcfLnytfr1b1UTEBtgo-iJwkzb2y88Nk0TDQr29UaHy7SM3Gdw6g60bRFrSTCtq5GJ3TPps7jsd0VcuwclbL32eRageN9JD1nIJrzmhS8-BHWUGb"/>
+</div>
+<div class="space-y-2 pt-2">
+<div class="flex items-center justify-between text-outline">
+<span class="font-technical-label text-technical-label uppercase tracking-widest">REF. AC-7200-GF</span>
+<span class="font-technical-label text-technical-label uppercase">39.5 MM • SINGLE PUSHER</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">
+              AURELIA Monopusher Chronograph
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Purity of classical chronometry. Single crown-integrated pusher starts, stops, and resets the chronograph mechanism across an 800°C kiln-fired enamel dial.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Calibre 1888 Manual</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Côtes de Genève</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Gold Chatons</span>
+</div>
+</div>
+<div class="pt-6 mt-6 border-t-0 space-y-4">
+<div class="flex items-baseline justify-between">
+<span class="font-caption-caps text-caption-caps uppercase text-outline">Atelier Valuation</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium tracking-tight">$112,000</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm shadow-md transition-all font-medium text-center" type="button">
+              Reserve Piece
+            </button>
+<button class="w-full bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm transition-all text-center flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Vault Bag</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 6: Tourbillon Répétition Minutes -->
+<article class="group relative bg-surface-container-low rounded-lg p-6 flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden" data-watch-id="ref-9950">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-primary/20 text-primary font-technical-label text-technical-label uppercase rounded-sm">Grand Complication</span>
+<span class="px-2 py-1 bg-surface-container-highest text-on-surface font-caption-caps text-caption-caps uppercase rounded-sm">Chiming Cathedral Gongs</span>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors" title="Compare Reference">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</button>
+</div>
+<div class="relative w-full aspect-[4/5] bg-surface-container-lowest rounded-md overflow-hidden flex items-center justify-center p-6">
+<img alt="AURELIA Tourbillon Repetition Minutes" class="w-full h-full object-contain filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.8)] transition-all duration-700 group-hover:scale-105" data-alt="Masterpiece macro capture of the Aurelia Tourbillon Répétition Minutes chiming watch, radiant 18k pink gold polished case with side repeater slide lever, smoked sapphire dial allowing visibility into the dual cathedral gongs and hand-black-polished hammers, flying tourbillon cage at 6 o'clock, matte charcoal leather strap." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClGN01kPPhlBVsZpOaB2Ag5wNvKwHSCsHkzlQsSbnmRvveBsChUDyo2oSP5uTf7ZFM36MO4DY14PNhGVpNW-1ZDedbjS7EWynNJzKWQJlKXfChRb5da0cQ1iV10ESA43ed7bDsgd4MrJLUkG_U1JQeCB8rAQp8XqPzpBiT8TtjJ1oCUwtN9NP84V5c6mJEVgqPaRzgi8-5tezNHYg7w-WHuosSuubOn2uPGI9sFDoM"/>
+<button class="absolute bottom-3 right-3 bg-surface-container-high/90 backdrop-blur-md px-2.5 py-1.5 rounded flex items-center gap-1.5 text-primary hover:bg-primary hover:text-on-primary transition-colors shadow">
+<span class="material-symbols-outlined text-[15px]">volume_up</span>
+<span class="font-caption-caps text-[9px] uppercase tracking-wider">Acoustic Test</span>
+</button>
+</div>
+<div class="space-y-2 pt-2">
+<div class="flex items-center justify-between text-outline">
+<span class="font-technical-label text-technical-label uppercase tracking-widest">REF. AC-9950-RM</span>
+<span class="font-technical-label text-technical-label uppercase">42.5 MM • CATHEDRAL GONGS</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface group-hover:text-primary transition-colors">
+              AURELIA Tourbillon Répétition Minutes
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              The pinnacle of acoustic horology. Minute repeater chiming hours, quarter-hours, and minutes on dual tempered steel cathedral gongs with a 60-second tourbillon.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">Calibre RM-09 Handwound</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">482 Components</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] uppercase">18k Pink Gold</span>
+</div>
+</div>
+<div class="pt-6 mt-6 border-t-0 space-y-4">
+<div class="flex items-baseline justify-between">
+<span class="font-caption-caps text-caption-caps uppercase text-outline">Atelier Valuation</span>
+<span class="font-headline-sm text-headline-sm text-primary font-medium tracking-tight">$240,000</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm shadow-md transition-all font-medium text-center" type="button">
+              Private Commission
+            </button>
+<button class="w-full bg-surface-container hover:bg-surface-variant text-on-surface font-technical-label text-technical-label py-3 uppercase tracking-wider rounded-sm transition-all text-center flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Vault Bag</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Technical Spec Table View (Hidden by default, toggled via JS) -->
+<section class="hidden w-full max-w-[1440px] mx-auto px-6 lg:px-12 py-10" id="technical-table-container">
+<div class="w-full bg-surface-container-low rounded-lg p-6 shadow-xl overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-lowest text-outline font-caption-caps text-caption-caps uppercase">
+<tr>
+<th class="py-4 px-4">Reference &amp; Model</th>
+<th class="py-4 px-4">Primary Complication</th>
+<th class="py-4 px-4">Case Metallurgy</th>
+<th class="py-4 px-4">Calibre</th>
+<th class="py-4 px-4">Power Reserve</th>
+<th class="py-4 px-4">Water Resistance</th>
+<th class="py-4 px-4">Valuation</th>
+<th class="py-4 px-4 text-right">Allocation Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface-variant">
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-title-editorial text-title-editorial text-on-surface">Chrono-Tourbillon 41mm</td>
+<td class="py-4 px-4 text-primary font-technical-label">Flying Tourbillon + Column Chrono</td>
+<td class="py-4 px-4">18k Rose Gold</td>
+<td class="py-4 px-4 font-technical-label">Calibre 8800</td>
+<td class="py-4 px-4">72 Hours</td>
+<td class="py-4 px-4">30m / 3 ATM</td>
+<td class="py-4 px-4 font-technical-label text-primary font-bold">$124,000</td>
+<td class="py-4 px-4 text-right">
+<button class="bg-primary text-on-primary px-3 py-1 font-technical-label text-technical-label uppercase rounded-sm hover:bg-primary-fixed">Acquire</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-title-editorial text-title-editorial text-on-surface">Royal Skeleton Diver 42mm</td>
+<td class="py-4 px-4 font-technical-label">Full Movement Skeletonization</td>
+<td class="py-4 px-4">Grade 5 Titanium</td>
+<td class="py-4 px-4 font-technical-label">Calibre AC-92</td>
+<td class="py-4 px-4">65 Hours</td>
+<td class="py-4 px-4">300m / 30 ATM</td>
+<td class="py-4 px-4 font-technical-label text-on-surface font-bold">$68,000</td>
+<td class="py-4 px-4 text-right">
+<button class="bg-primary text-on-primary px-3 py-1 font-technical-label text-technical-label uppercase rounded-sm hover:bg-primary-fixed">Acquire</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-title-editorial text-title-editorial text-on-surface">Celestial Moonphase Perpetual</td>
+<td class="py-4 px-4 text-primary font-technical-label">Secular Perpetual Calendar</td>
+<td class="py-4 px-4">Platinum 950</td>
+<td class="py-4 px-4 font-technical-label">Calibre 990QP</td>
+<td class="py-4 px-4">60 Hours</td>
+<td class="py-4 px-4">50m / 5 ATM</td>
+<td class="py-4 px-4 font-technical-label text-primary font-bold">$195,000</td>
+<td class="py-4 px-4 text-right">
+<button class="bg-primary text-on-primary px-3 py-1 font-technical-label text-technical-label uppercase rounded-sm hover:bg-primary-fixed">Dossier</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-title-editorial text-title-editorial text-on-surface">Forged Carbon Flyback</td>
+<td class="py-4 px-4 font-technical-label">High-Beat Flyback Chronograph</td>
+<td class="py-4 px-4">Forged Carbon / DLC</td>
+<td class="py-4 px-4 font-technical-label">Calibre CF-12</td>
+<td class="py-4 px-4">55 Hours</td>
+<td class="py-4 px-4">100m / 10 ATM</td>
+<td class="py-4 px-4 font-technical-label text-on-surface font-bold">$84,500</td>
+<td class="py-4 px-4 text-right">
+<button class="bg-primary text-on-primary px-3 py-1 font-technical-label text-technical-label uppercase rounded-sm hover:bg-primary-fixed">Acquire</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-title-editorial text-title-editorial text-on-surface">Monopusher Chronograph</td>
+<td class="py-4 px-4 font-technical-label">Coaxial Single Pusher Chrono</td>
+<td class="py-4 px-4">18k White Gold</td>
+<td class="py-4 px-4 font-technical-label">Calibre 1888</td>
+<td class="py-4 px-4">50 Hours</td>
+<td class="py-4 px-4">30m / 3 ATM</td>
+<td class="py-4 px-4 font-technical-label text-on-surface font-bold">$112,000</td>
+<td class="py-4 px-4 text-right">
+<button class="bg-primary text-on-primary px-3 py-1 font-technical-label text-technical-label uppercase rounded-sm hover:bg-primary-fixed">Acquire</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-4 px-4 font-title-editorial text-title-editorial text-on-surface">Tourbillon Répétition Minutes</td>
+<td class="py-4 px-4 text-primary font-technical-label">Cathedral Minute Repeater + Tourbillon</td>
+<td class="py-4 px-4">18k Pink Gold</td>
+<td class="py-4 px-4 font-technical-label">Calibre RM-09</td>
+<td class="py-4 px-4">70 Hours</td>
+<td class="py-4 px-4">30m / 3 ATM</td>
+<td class="py-4 px-4 font-technical-label text-primary font-bold">$240,000</td>
+<td class="py-4 px-4 text-right">
+<button class="bg-primary text-on-primary px-3 py-1 font-technical-label text-technical-label uppercase rounded-sm hover:bg-primary-fixed">Inquire</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Collector's Bespoke Consultation Banner -->
+<section class="w-full max-w-[1440px] mx-auto px-6 lg:px-12 pb-24">
+<div class="relative bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-8 lg:p-14 rounded-xl overflow-hidden shadow-2xl">
+<!-- Fine gold accent glow -->
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">workspace_premium</span>
+<span class="font-caption-caps text-caption-caps uppercase text-primary tracking-widest">PRIVATE HOROLOGICAL COMMISSION</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            Bespoke Atelier Commission &amp; Master Horologist Consultation
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl font-light">
+            Should your requirements demand an unlisted complication, bespoke hand-engraved rotor, custom guilloché dial, or personal gemstone setting, our Geneva Master Horologists receive private salon appointments via secure encrypted telepresence or in our private Rue du Rhône atelier.
+          </p>
+<div class="flex flex-wrap items-center gap-6 pt-2 text-outline font-technical-label text-technical-label uppercase">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Private Geneva Vault Viewing</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> 1-on-1 Calibre Engineering Advisory</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Worldwide Armored Courier Delivery</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-3 justify-center items-start lg:items-end">
+<button class="w-full sm:w-auto bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-technical-label px-8 py-4 uppercase tracking-widest rounded-sm shadow-xl hover:shadow-primary/20 transition-all font-semibold text-center" type="button">
+            Schedule Private Consultation
+          </button>
+<button class="w-full sm:w-auto bg-surface-container-high hover:bg-surface-variant text-on-surface font-technical-label text-technical-label px-8 py-3.5 uppercase tracking-widest rounded-sm transition-all text-center" type="button">
+            Explore Bespoke Archives
+          </button>
+<span class="font-caption-caps text-[10px] text-outline uppercase tracking-wider pt-1">
+            Direct Concierge: +41 22 819 9000
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Vanilla JS micro-interactions for catalog switching -->
+<script>
+    // Toggle View modes (Grid vs Table)
+    const gridBtn = document.getElementById('view-grid-btn');
+    const tableBtn = document.getElementById('view-table-btn');
+    const galleryView = document.getElementById('gallery-container');
+    const tableView = document.getElementById('technical-table-container');
+
+    if (gridBtn && tableBtn && galleryView && tableView) {
+      gridBtn.addEventListener('click', () => {
+        galleryView.classList.remove('hidden');
+        tableView.classList.add('hidden');
+        gridBtn.classList.add('bg-primary', 'text-on-primary');
+        gridBtn.classList.remove('text-on-surface-variant');
+        tableBtn.classList.remove('bg-primary', 'text-on-primary');
+        tableBtn.classList.add('text-on-surface-variant');
+      });
+
+      tableBtn.addEventListener('click', () => {
+        galleryView.classList.add('hidden');
+        tableView.classList.remove('hidden');
+        tableBtn.classList.add('bg-primary', 'text-on-primary');
+        tableBtn.classList.remove('text-on-surface-variant');
+        gridBtn.classList.remove('bg-primary', 'text-on-primary');
+        gridBtn.classList.add('text-on-surface-variant');
+      });
+    }
+
+    // Category Filter Selection Styling
+    const pills = document.querySelectorAll('.filter-pill');
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        pill.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      });
+    });
+
+    // Metallurgy toggle filters
+    const matTags = document.querySelectorAll('.material-tag');
+    matTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        tag.classList.toggle('bg-primary');
+        tag.classList.toggle('text-on-primary');
+        tag.classList.toggle('bg-surface-container');
+        tag.classList.toggle('text-on-surface');
+      });
+    });
+
+    // Night luminescence toggle simulation
+    function toggleLume(id) {
+      const img = document.getElementById('watch-img-' + id);
+      if (img) {
+        if (img.style.filter.includes('brightness(1.4)')) {
+          img.style.filter = 'drop-shadow(0 20px 25px rgba(0,0,0,0.8))';
+        } else {
+          img.style.filter = 'drop-shadow(0 0 25px rgba(242, 202, 80, 0.7)) brightness(1.4)';
+        }
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-primary/20 pt-16 pb-12"><div class="max-w-[1440px] mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-outline-variant/30"><div class="lg:col-span-2 space-y-4"><div class="flex items-center gap-3"><img alt="AURELIA &amp; CIE Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDWyoCrlAXoG3ohyeepdOX4PHIAbySNK-CsOj1IAOwFFrrcE2IudVr916zDNz6mPT0nPtLEMlDbPV9u-sE2ZECNXdagS1WljIS1_vHH_-ypSKNxdXMTQnPxqbskv_XPr6v2DgIQJzZMVMhE8m_z2zsHY-PxQR-Va_86muqUFSSZEHhmcflO92Qplxbuq521xy_aUujQdMt9kf5fMPidD0BoFUjxXA9-JAJoJgDKKiffVw"/><span class="font-title-editorial text-title-editorial uppercase tracking-[0.2em] text-on-surface">Aurelia &amp; Cie</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Haute Horlogerie Genève. Guardians of high-complication mechanical artistry, micro-architectural mastery, and hand-finished chronometry since 1888.</p><div class="pt-2 flex items-center gap-4"><div class="px-3 py-1 border border-primary/30 rounded bg-surface-container-low"><span class="font-technical-label text-technical-label text-primary">POINÇON DE GENÈVE ACCREDITED</span></div></div></div><div class="space-y-3"><h4 class="font-caption-caps text-caption-caps uppercase text-primary tracking-widest">Private Boutiques</h4><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li>Genève — Rue du Rhône 42</li><li>Zürich — Bahnhofstrasse 18</li><li>New York — Madison Avenue 740</li><li>Tokyo — Ginza 6-Chome</li><li>Dubai — The Dubai Mall Promenade</li></ul></div><div class="space-y-3"><h4 class="font-caption-caps text-caption-caps uppercase text-primary tracking-widest">Client Concierge</h4><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li>Private Horological Advisory</li><li>White-Glove Armored Transit</li><li>Calibre Restoration &amp; Service</li><li>Certificate of Authenticity</li><li class="font-technical-label text-technical-label text-primary pt-1">CONCIERGE: +41 22 819 9000</li></ul></div><div class="space-y-4"><h4 class="font-caption-caps text-caption-caps uppercase text-primary tracking-widest">Private Allocations</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Subscribe for discreet confidential notifications regarding numbered grand complication debuts.</p><div class="flex flex-col gap-2"><input class="bg-surface-container-low border border-outline-variant px-3 py-2 text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:border-primary" placeholder="Atelier Dossier Access Email" type="email"/><button class="bg-primary text-on-primary font-technical-label text-technical-label px-4 py-2.5 uppercase tracking-widest hover:bg-primary-fixed transition-colors text-center font-medium" type="button">Request Allocation</button></div></div></div><div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-on-surface-variant"><div class="flex items-center gap-6 font-technical-label text-technical-label uppercase text-outline"><span>Swiss Vault Escrow Protection</span><span>Lloyd's Insured Transit</span><span>Geneva Seal Horloger</span></div><p class="font-caption-caps text-caption-caps text-outline">© 2024 AURELIA &amp; CIE GENÈVE. ALL RIGHTS RESERVED.</p></div></div></footer></body></html>
