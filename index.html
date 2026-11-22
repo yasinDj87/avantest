@@ -3,60 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="مجموعه‌ای منتخب از ساعت‌های لوکس و ماندگار">
-  <title>آوان | ساعت‌های لوکس</title>
+  <meta name="theme-color" content="#171914">
+  <meta name="description" content="آوان؛ انتخابی ماندگار از ساعت‌های خاص و لوکس">
+  <title>AVAN | زمان، امضای شخصیت شماست</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="announcement">ارسال رایگان برای سفارش‌های بالای ۵۰ میلیون تومان</div>
+  <div class="announcement">ارسال رایگان برای سفارش‌های بالای ۵۰ میلیون تومان <span>✦</span> تجربه‌ای فراتر از زمان</div>
   <header class="site-header">
-    <a class="brand" href="#" aria-label="آوان">AVAN<span>ِ</span></a>
-    <nav>
-      <a href="#collection">کالکشن</a>
-      <a href="#story">درباره آوان</a>
-      <a href="#craft">اصالت و کیفیت</a>
+    <a class="brand" href="#home" aria-label="آوان">AVAN<span>®</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#home">خانه</a><a href="#collection">کالکشن</a><a href="#story">داستان آوان</a><a href="#promise">تعهد ما</a>
     </nav>
-    <a class="header-cta" href="#collection">مشاهده ساعت‌ها <span>↙</span></a>
-    <button class="menu-toggle" aria-label="باز کردن منو">☰</button>
+    <div class="header-actions">
+      <button class="icon-btn admin-open" type="button" title="پنل مدیریت" aria-label="پنل مدیریت">⌘</button>
+      <button class="icon-btn cart-open" type="button" aria-label="سبد خرید">♧<span class="cart-count" id="cart-count">0</span></button>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="باز کردن منو">☰</button>
   </header>
 
-  <main>
+  <main id="home">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">فراتر از زمان · مجموعه منتخب ۲۰۲۶</p>
+        <p class="eyebrow"><span></span> THE ART OF TIME · COLLECTION 2026</p>
         <h1>زمان، امضای<br><em>شخصیت شماست.</em></h1>
-        <p class="hero-text">انتخابی دقیق از ساعت‌هایی که با ظرافت ساخته شده‌اند تا سال‌ها، داستان شما را روایت کنند.</p>
-        <div class="hero-actions">
-          <a class="button button-gold" href="#collection">کشف کالکشن <span>↙</span></a>
-          <a class="text-link" href="#story">داستان آوان</a>
-        </div>
-        <div class="hero-note"><span class="small-line"></span> ظرافت در جزئیات، شکوه در سادگی</div>
+        <p class="hero-text">انتخابی دقیق از ساعت‌هایی با طراحی ماندگار؛ برای لحظه‌هایی که ارزش به‌یادماندن دارند.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#collection">کشف کالکشن <b>↙</b></a><a class="under-link" href="#story">داستان آوان</a></div>
+        <div class="hero-foot"><span class="line"></span> ظرافت در جزئیات، شکوه در سادگی</div>
       </div>
-      <div class="hero-art">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="hero-watch">
-          <div class="watch-strap"></div>
-          <div class="watch-case">
-            <div class="watch-face">
-              <div class="watch-inner"></div><i class="hand hand-hour"></i><i class="hand hand-minute"></i>
-              <span class="watch-dot d1"></span><span class="watch-dot d2"></span><span class="watch-dot d3"></span><span class="watch-dot d4"></span>
-              <span class="watch-brand">AVAN</span>
-            </div>
-          </div>
-        </div>
-        <div class="art-caption"><span>01 / 03</span><span>TIMELESS DESIGN</span></div>
+      <div class="hero-visual">
+        <div class="hero-circle circle-a"></div><div class="hero-circle circle-b"></div>
+        <div class="hero-watch watch-render gold-watch"><div class="strap"></div><div class="case"><div class="dial"><span class="dial-brand">AVAN</span><i class="hour-hand"></i><i class="minute-hand"></i><b class="marker m12"></b><b class="marker m3"></b><b class="marker m6"></b><b class="marker m9"></b></div></div></div>
+        <div class="visual-label"><span>01 / 04</span><span>TIMELESS OBJECTS</span></div>
       </div>
-      <div class="hero-index">A V A N &nbsp; / &nbsp; ۰۱</div>
+      <div class="hero-side">A V A N　/　EST. 2026</div>
     </section>
 
-    <section class="trust-strip" id="craft">
-      <div><strong>۱۰۰٪</strong><span>تضمین اصالت کالا</span></div>
-      <div><strong>۲۴</strong><span>ماه ضمانت فروشگاه</span></div>
-      <div><strong>۷ روز</strong><span>فرصت بازگشت کالا</span></div>
-      <div><strong>VIP</strong><span>بسته‌بندی ویژه</span></div>
+    <section class="trust-strip" id="promise">
+      <div><strong>۱۰۰٪</strong><span>تضمین اصالت کالا</span></div><div><strong>۲۴ ماه</strong><span>ضمانت فروشگاه</span></div><div><strong>۷ روز</strong><span>فرصت بازگشت کالا</span></div><div><strong>VIP</strong><span>بسته‌بندی ویژه آوان</span></div>
     </section>
 
     <section class="collection section-wrap" id="collection">
@@ -64,45 +51,57 @@
         <div><p class="eyebrow">THE COLLECTION</p><h2>انتخابی برای <em>ماندگاری</em></h2></div>
         <p>هر قطعه، ترکیبی از مهندسی دقیق و زیبایی بی‌زمان.</p>
       </div>
-      <div class="filters" role="group" aria-label="فیلتر محصولات">
-        <button class="filter active" data-filter="all">همه ساعت‌ها</button>
-        <button class="filter" data-filter="men">مردانه</button>
-        <button class="filter" data-filter="women">زنانه</button>
-        <button class="filter" data-filter="classic">کلاسیک</button>
+      <div class="shop-toolbar">
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="all">همه ساعت‌ها</button>
+          <button class="filter" data-category="men">مردانه</button>
+          <button class="filter" data-category="women">زنانه</button>
+          <button class="filter" data-category="classic">کلاسیک</button>
+          <button class="filter" data-category="sport">اسپرت</button>
+        </div>
+        <div class="shop-tools">
+          <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="جست‌وجوی ساعت..." aria-label="جست‌وجوی محصولات"></label>
+          <select id="sort-select" aria-label="مرتب‌سازی"><option value="featured">مرتب‌سازی: پیشنهادی</option><option value="low">ارزان‌ترین</option><option value="high">گران‌ترین</option><option value="new">جدیدترین</option></select>
+        </div>
       </div>
-      <div class="product-grid">
-        <article class="product-card" data-category="men classic">
-          <div class="product-image watch-img watch-black"><span class="product-tag">پرفروش</span><div class="product-watch"><div class="mini-strap"></div><div class="mini-dial"><b>AVAN</b><i></i></div></div><button class="quick-view" aria-label="افزودن ساعت اطلس به علاقه‌مندی‌ها">♡</button></div>
-          <div class="product-info"><div><h3>اطلس کلاسیک</h3><p>استیل ضدزنگ · صفحه مشکی</p></div><strong>۴۸,۵۰۰,۰۰۰ <small>تومان</small></strong></div>
-        </article>
-        <article class="product-card" data-category="women classic">
-          <div class="product-image watch-img watch-cream"><span class="product-tag">کالکشن جدید</span><div class="product-watch"><div class="mini-strap"></div><div class="mini-dial"><b>AVAN</b><i></i></div></div><button class="quick-view" aria-label="افزودن ساعت سلین به علاقه‌مندی‌ها">♡</button></div>
-          <div class="product-info"><div><h3>سلین رزگلد</h3><p>بدنه رزگلد · صفحه صدفی</p></div><strong>۵۶,۹۰۰,۰۰۰ <small>تومان</small></strong></div>
-        </article>
-        <article class="product-card" data-category="men">
-          <div class="product-image watch-img watch-green"><div class="product-watch"><div class="mini-strap"></div><div class="mini-dial"><b>AVAN</b><i></i></div></div><button class="quick-view" aria-label="افزودن ساعت نوا به علاقه‌مندی‌ها">♡</button></div>
-          <div class="product-info"><div><h3>نوا اتوماتیک</h3><p>موتور اتوماتیک · صفحه سبز</p></div><strong>۷۲,۰۰۰,۰۰۰ <small>تومان</small></strong></div>
-        </article>
-        <article class="product-card" data-category="women">
-          <div class="product-image watch-img watch-blue"><div class="product-watch"><div class="mini-strap"></div><div class="mini-dial"><b>AVAN</b><i></i></div></div><button class="quick-view" aria-label="افزودن ساعت لیرا به علاقه‌مندی‌ها">♡</button></div>
-          <div class="product-info"><div><h3>لیرا مینیمال</h3><p>استیل صیقلی · طراحی ظریف</p></div><strong>۳۹,۸۰۰,۰۰۰ <small>تومان</small></strong></div>
-        </article>
-      </div>
-      <p class="demo-note">* این محصولات و قیمت‌ها نمونه نمایشی هستند و برای فروش واقعی باید با اطلاعات فروشگاه جایگزین شوند.</p>
+      <div class="price-filter"><label for="price-range">حداکثر قیمت: <strong id="price-label">۱۰۰ میلیون تومان</strong></label><input id="price-range" type="range" min="20000000" max="100000000" step="5000000" value="100000000"><button id="clear-filters" type="button">پاک‌کردن فیلترها</button></div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="demo-note">محصولات و قیمت‌ها نمونه نمایشی هستند و پیش از فروش باید با اطلاعات واقعی فروشگاه جایگزین شوند.</p>
     </section>
 
     <section class="story" id="story">
-      <div class="story-art"><div class="story-ring"></div><div class="story-monogram">A</div><span>EST. 2026</span></div>
-      <div class="story-copy"><p class="eyebrow">OUR PHILOSOPHY</p><h2>لوکس بودن،<br><em>در آرامشِ جزئیات است.</em></h2><p>در آوان، باور داریم ساعت فقط ابزاری برای نمایش زمان نیست؛ بخشی از سلیقه و هویت شماست. به همین دلیل هر انتخاب را با نگاهی وسواس‌گونه به طراحی، کیفیت و ماندگاری انجام می‌دهیم.</p><a class="text-link" href="#craft">بیشتر درباره تعهد ما <span>↙</span></a></div>
+      <div class="story-art"><div class="story-ring"></div><div class="story-monogram">A</div><span>EST. 2026 — AVAN</span></div>
+      <div class="story-copy"><p class="eyebrow">OUR PHILOSOPHY</p><h2>لوکس بودن،<br><em>در آرامش جزئیات است.</em></h2><p>در آوان، ساعت فقط ابزاری برای نمایش زمان نیست؛ بخشی از سلیقه و هویت شماست. هر انتخاب با نگاهی دقیق به طراحی، کیفیت و ماندگاری انجام می‌شود.</p><a class="under-link" href="#promise">تعهد آوان به کیفیت <b>↙</b></a></div>
     </section>
 
     <section class="newsletter section-wrap">
       <p class="eyebrow">THE AVAN LETTER</p><h2>خبرهای خوب، <em>به‌موقع می‌رسند.</em></h2><p>برای اطلاع از کالکشن‌های تازه و پیشنهادهای ویژه عضو خبرنامه شوید.</p>
-      <form id="newsletter-form"><input type="email" placeholder="آدرس ایمیل شما" aria-label="آدرس ایمیل" required><button type="submit">عضویت <span>↙</span></button></form><small id="form-message">با عضویت، فقط خبرهای مهم آوان را دریافت می‌کنید.</small>
+      <form id="newsletter-form"><input type="email" placeholder="آدرس ایمیل شما" aria-label="آدرس ایمیل" required><button type="submit">عضویت <b>↙</b></button></form><small id="form-message">این فرم در نسخه نمایشی به سامانه ایمیل متصل نیست.</small>
     </section>
   </main>
 
-  <footer><a class="brand" href="#">AVAN<span>ِ</span></a><p>زمان می‌گذرد؛ سلیقه ماندگار است.</p><span>© 2026 AVAN. تمام حقوق محفوظ است.</span></footer>
+  <footer><a class="brand" href="#home">AVAN<span>®</span></a><p>زمان می‌گذرد؛ سلیقه ماندگار است.</p><span>© 2026 AVAN. تمام حقوق محفوظ است.</span></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="سبد خرید" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">YOUR SELECTION</p><h3>سبد خرید</h3></div><button class="close-btn" data-close aria-label="بستن">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-bottom"><div class="subtotal"><span>جمع کل</span><strong id="cart-total">۰ تومان</strong></div><button class="button button-dark checkout-btn" id="checkout-btn">ثبت سفارش آزمایشی <b>↙</b></button><small>پرداخت آنلاین در این نسخه فعال نیست.</small></div>
+  </aside>
+
+  <section class="modal" id="product-modal" role="dialog" aria-modal="true" aria-label="جزئیات محصول">
+    <button class="close-btn modal-close" data-close aria-label="بستن">×</button><div id="product-modal-content"></div>
+  </section>
+
+  <section class="modal admin-modal" id="admin-modal" role="dialog" aria-modal="true" aria-label="پنل مدیریت">
+    <button class="close-btn modal-close" data-close aria-label="بستن">×</button>
+    <div class="admin-heading"><p class="eyebrow">AVAN CONTROL ROOM</p><h2>پنل مدیریت فروشگاه</h2><p>مدیریت نمایشی محصولات و سفارش‌های ذخیره‌شده در همین مرورگر</p></div>
+    <div class="admin-stats" id="admin-stats"></div>
+    <div class="admin-tabs"><button class="admin-tab active" data-tab="products">محصولات</button><button class="admin-tab" data-tab="orders">سفارش‌ها</button></div>
+    <div id="admin-content"></div>
+  </section>
+
+  <div class="toast" id="toast" role="status"></div>
   <script src="script.js"></script>
 </body>
 </html>
