@@ -1,0 +1,12 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/collections", "destination": "/collections.html" },
+    { "source": "/product", "destination": "/product.html" },
+    { "source": "/checkout", "destination": "/checkout.html" },
+    { "source": "/cart", "destination": "/cart.html" },
+    { "source": "/dashboard", "destination": "/dashboard.html" },
+    { "source": "/daytona", "destination": "/daytona.html" }
+  ]
+}
