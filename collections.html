@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<style id="quiet-luxury-animations">
+  /* ==========================================================================
+     AURELIA & CIE — QUIET LUXURY MOTION SYSTEM
+     Palette: #121316 (Obsidian), #d4af37 (Antique Gold), #f2ca50 (Luminous Gold)
+     ========================================================================== */
+
+  /* 1. Page Load: Refined Fade-Up & Staggered Card Entrance */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .watch-card {
+    animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.35s ease;
+  }
+
+  .watch-card:nth-child(1) { animation-delay: 0.05s; }
+  .watch-card:nth-child(2) { animation-delay: 0.12s; }
+  .watch-card:nth-child(3) { animation-delay: 0.19s; }
+  .watch-card:nth-child(4) { animation-delay: 0.26s; }
+  .watch-card:nth-child(5) { animation-delay: 0.33s; }
+  .watch-card:nth-child(6) { animation-delay: 0.40s; }
+
+  /* 2. Header Scroll State */
+  header {
+    transition: background-color 0.35s ease,
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
+  }
+
+  header.header-scrolled {
+    background-color: rgba(13, 14, 17, 0.96) !important;
+    border-bottom-color: rgba(242, 202, 80, 0.42) !important;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.75) !important;
+  }
+
+  /* 3. Navigation Underline, Icon Hover & Vault Badge Pop */
+  header nav a {
+    position: relative;
+  }
+
+  header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background-color: #f2ca50;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 250ms ease;
+  }
+
+  header nav a:hover::after {
+    transform: scaleX(1);
+  }
+
+  header .material-symbols-outlined,
+  .wishlist-btn .material-symbols-outlined {
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), color 0.25s ease;
+  }
+
+  header a:hover .material-symbols-outlined,
+  header button:hover .material-symbols-outlined,
+  .wishlist-btn:hover .material-symbols-outlined {
+    transform: scale(1.06);
+    color: #f2ca50;
+  }
+
+  @keyframes badgePop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.18); }
+    70% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+  }
+
+  .badge-pop {
+    animation: badgePop 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* 4. Watch Product Cards: Hover Elevation, Soft Gold Glow, Crystal Sweep & Badge Shimmer */
+  .watch-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 18px 42px -12px rgba(0, 0, 0, 0.75),
+                0 0 24px -4px rgba(212, 175, 55, 0.16);
+  }
+
+  .watch-card .aspect-square {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .watch-card:hover .aspect-square img {
+    transform: scale(1.05);
+  }
+
+  @keyframes crystalSweep {
+    0%, 65% {
+      transform: translateX(-140%) skewX(-22deg);
+      opacity: 0;
+    }
+    78% {
+      opacity: 0.14;
+    }
+    92%, 100% {
+      transform: translateX(160%) skewX(-22deg);
+      opacity: 0;
+    }
+  }
+
+  .watch-card .aspect-square::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(242, 202, 80, 0.18) 50%,
+      transparent 100%
+    );
+    pointer-events: none;
+    animation: crystalSweep 5.5s ease-in-out infinite;
+  }
+
+  @keyframes badgeShimmer {
+    0%, 100% {
+      box-shadow: 0 0 0 rgba(242, 202, 80, 0);
+      filter: brightness(1);
+    }
+    50% {
+      box-shadow: 0 0 12px rgba(242, 202, 80, 0.25);
+      filter: brightness(1.08);
+    }
+  }
+
+  .badge-shimmer {
+    animation: badgeShimmer 4.5s ease-in-out infinite;
+  }
+
+  /* 5. Accessibility & Mobile Performance */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .watch-card,
+    .badge-pop,
+    .badge-shimmer,
+    .watch-card .aspect-square::after {
+      animation: none !important;
+      transition: none !important;
+    }
+    .watch-card:hover {
+      transform: none !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .watch-card .aspect-square::after,
+    .badge-shimmer {
+      animation: none !important;
+    }
+  }
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#ffe088", "error-container": "#93000a", "on-primary-fixed": "#241a00", "surface-variant": "#343538", "secondary-fixed": "#dde3eb", "on-tertiary": "#3d2e00", "secondary-container": "#41474e", "surface-container": "#1f1f23", "inverse-primary": "#735c00", "secondary-fixed-dim": "#c1c7cf", "on-secondary-fixed-variant": "#41474e", "tertiary-fixed-dim": "#e4c36a", "primary-container": "#d4af37", "primary-fixed-dim": "#e9c349", "outline": "#99907c", "on-surface-variant": "#d0c5af", "outline-variant": "#4d4635", "on-tertiary-fixed": "#241a00", "tertiary": "#edcb71", "on-secondary-container": "#afb6bd", "surface-tint": "#e9c349", "on-primary": "#3c2f00", "on-background": "#e3e2e6", "surface-container-low": "#1b1b1f", "background": "#121316", "on-error-container": "#ffdad6", "on-error": "#690005", "on-primary-container": "#554300", "error": "#ffb4ab", "tertiary-fixed": "#ffe08f", "tertiary-container": "#d0b059", "on-tertiary-container": "#574300", "on-secondary": "#2b3137", "on-tertiary-fixed-variant": "#584400", "surface-dim": "#121316", "surface-bright": "#38393c", "on-secondary-fixed": "#161c22", "on-surface": "#e3e2e6", "inverse-on-surface": "#2f3034", "primary": "#f2ca50", "secondary": "#c1c7cf", "inverse-surface": "#e3e2e6", "surface": "#121316", "surface-container-highest": "#343538", "surface-container-lowest": "#0d0e11", "on-primary-fixed-variant": "#574500", "surface-container-high": "#292a2d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "3rem", "gutter": "1.5rem", "space-lg": "1.75rem", "margin": "4rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "display-hero": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "body-md": [ "Inter" ], "headline-lg-mobile": [ "Playfair Display" ], "body-sm": [ "Inter" ], "title-editorial": [ "Playfair Display" ], "caption-caps": [ "Inter" ], "headline-lg": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "body-lg": [ "Inter" ], "display-hero-mobile": [ "Playfair Display" ], "technical-label": [ "Space Grotesk" ] }, "fontSize": { "display-hero": [ "4.5rem", { "lineHeight": "5rem", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-sm": [ "1.5rem", { "lineHeight": "2rem", "fontWeight": "500" } ], "body-md": [ "0.9375rem", { "lineHeight": "1.6rem", "fontWeight": "400" } ], "headline-lg-mobile": [ "2rem", { "lineHeight": "2.5rem", "fontWeight": "400" } ], "body-sm": [ "0.8125rem", { "lineHeight": "1.375rem", "fontWeight": "400" } ], "title-editorial": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0.02em", "fontWeight": "600" } ], "caption-caps": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.2em", "fontWeight": "600" } ], "headline-lg": [ "3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-md": [ "2.25rem", { "lineHeight": "2.75rem", "fontWeight": "400" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.875rem", "fontWeight": "300" } ], "display-hero-mobile": [ "2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "technical-label": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.15em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-2xl border-b border-primary/20 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"><div class="w-full bg-surface-container-lowest border-b border-outline-variant/30 py-1.5 px-4 text-center"><p class="font-caption-caps text-caption-caps text-on-surface-variant uppercase">COMPLIMENTARY SECURE INSURED GLOBAL WHITE-GLOVE COURIER DELIVERY ON ALL TIMEPIECES</p></div><div class="h-20 max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-4 shrink-0"><img alt="AURELIA &amp; CIE Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDWyoCrlAXoG3ohyeepdOX4PHIAbySNK-CsOj1IAOwFFrrcE2IudVr916zDNz6mPT0nPtLEMlDbPV9u-sE2ZECNXdagS1WljIS1_vHH_-ypSKNxdXMTQnPxqbskv_XPr6v2DgIQJzZMVMhE8m_z2zsHY-PxQR-Va_86muqUFSSZEHhmcflO92Qplxbuq521xy_aUujQdMt9kf5fMPidD0BoFUjxXA9-JAJoJgDKKiffVw"/><a class="flex flex-col text-left" data-path="home" href="/"><span class="font-title-editorial text-title-editorial uppercase tracking-[0.25em] text-on-surface">Aurelia &amp; Cie</span><span class="font-technical-label text-technical-label text-primary uppercase">Haute Horlogerie Genève</span></a></div><nav class="hidden xl:flex items-center gap-8" data-active-classes="text-primary border-b border-primary pb-1"><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="collections" href="/collections">Collections</a><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="grand-complications" href="/product">Grand Complications</a><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="bespoke-atelier" href="/#">Bespoke Atelier</a><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="heritage" href="/#">Heritage</a><a class="font-technical-label text-technical-label text-on-surface-variant hover:text-on-surface transition-colors uppercase" data-path="boutiques" href="/#">Boutiques</a></nav><div class="flex items-center gap-5 shrink-0"><div class="hidden md:flex items-center bg-surface-container-low/70 border border-outline-variant/40 rounded px-3 py-1.5 focus-within:border-primary transition-colors"><span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span><input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none w-36 lg:w-44" placeholder="Concierge Search..." type="text"/></div><div class="flex items-center gap-1 font-technical-label text-technical-label text-on-surface-variant"><span class="text-primary cursor-pointer">CHF</span><span class="text-outline-variant">/</span><span class="hover:text-on-surface cursor-pointer transition-colors">USD</span><span class="text-outline-variant">/</span><span class="hover:text-on-surface cursor-pointer transition-colors">EUR</span></div><a class="relative p-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="wishlist" href="/cart"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="absolute top-0 right-0 w-3.5 h-3.5 bg-primary text-on-primary font-technical-label text-[9px] rounded-full flex items-center justify-center font-bold">1</span></a><a class="flex items-center gap-1.5 bg-surface-container-high/60 border border-outline-variant/50 hover:border-primary/50 px-3 py-1.5 rounded transition-colors" data-path="shopping-vault" href="/cart" id="header-vault-link"><span class="material-symbols-outlined text-[18px] text-primary">lock</span><span class="font-technical-label text-technical-label text-on-surface uppercase">Vault (2)</span></a><div class="flex items-center pl-2 border-l border-outline-variant/50"><a class="flex items-center" data-path="vip-portal" href="/dashboard"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-primary/40 hover:border-primary transition-colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGw-C29gnBIbdSw_FhCynAxMpGXaxduoLNdvFeI1dmDnPlFiM7KCNAdubVHJIDawwnA_1GXapyQyF8kyfKqLiAixlUBrZuX6CBVoLH6oyUKKLjgWI2dGHwbm1Z86RkPDmM645OmTTCczMBWhB4bU9H7xfAVwCkXPiSB1yz5bRw89pfCBAw2ZAePcbVOZdEdwGdXRdMbwtmHlQnYa4ueMSqvGMEpUDxQtaF2CEHjdKG"/></a></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full overflow-hidden bg-surface-container-lowest animate-fade-up">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[350px] bg-primary/5 blur-[120px] pointer-events-none rounded-full"></div>
+<!-- Editorial Header Section -->
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12 pt-10 pb-8 relative z-10">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<p class="font-caption-caps text-caption-caps uppercase text-primary tracking-[0.25em]">Geneva Vault Direct Escrow Access</p>
+<span class="text-outline-variant text-xs">•</span>
+<span class="font-technical-label text-technical-label text-outline uppercase">28 Authenticated References in Swiss FreePort</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+<div class="max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+              Haute Horlogerie &amp; Vault Allocations
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+              Authentic chronometric references catalogued and authenticated in Geneva. Escrow-secured settlements under Swiss banking oversight with worldwide armored courier transit.
+            </p>
+</div>
+<!-- Currency & Guarantee Badges -->
+<div class="flex items-center gap-4 self-start lg:self-auto shrink-0 bg-surface-container-low px-4 py-2.5 rounded border border-outline-variant/40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span class="font-technical-label text-technical-label text-on-surface uppercase">Escrow Secured</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-1.5 font-technical-label text-technical-label" id="currency-selector">
+<button class="curr-btn text-primary font-semibold transition-colors" data-curr="USD">USD ($)</button>
+<span class="text-outline-variant">/</span>
+<button class="curr-btn text-outline hover:text-on-surface transition-colors" data-curr="CHF">CHF</button>
+<span class="text-outline-variant">/</span>
+<button class="curr-btn text-outline hover:text-on-surface transition-colors" data-curr="EUR">EUR (€)</button>
+</div>
+</div>
+</div>
+<!-- High-Precision Search Bar (Chrono24 Style) -->
+<div class="mt-4 bg-surface-container p-2 rounded-lg border border-outline-variant/50 shadow-2xl flex flex-col md:flex-row items-stretch gap-2">
+<div class="relative flex-1 flex items-center bg-surface-container-low rounded px-4 py-2.5">
+<span class="material-symbols-outlined text-primary mr-3 text-[22px]">search</span>
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none" id="global-search-input" placeholder="Search by brand, reference ('126500LN', '5711/1R', '228238'), complication, or calibre..." type="text"/>
+<button class="hidden text-outline hover:text-on-surface ml-2" id="clear-search">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative min-w-[170px] bg-surface-container-low rounded px-3 py-2.5 flex items-center justify-between text-on-surface">
+<span class="font-technical-label text-technical-label text-outline uppercase mr-2">Location:</span>
+<select class="bg-transparent font-technical-label text-technical-label text-on-surface focus:outline-none uppercase cursor-pointer" id="location-select">
+<option class="bg-surface-container-high" value="ALL">All Vaults (28)</option>
+<option class="bg-surface-container-high" value="GENEVA">Geneva FreePort (18)</option>
+<option class="bg-surface-container-high" value="ZURICH">Zurich Salon (4)</option>
+<option class="bg-surface-container-high" value="LONDON">London Vault (3)</option>
+<option class="bg-surface-container-high" value="NEWYORK">New York Atelier (3)</option>
+</select>
+</div>
+<button class="bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-technical-label uppercase px-6 py-3 rounded font-semibold transition-all duration-200 tracking-wider flex items-center gap-2 shadow-[0_0_20px_rgba(242,202,80,0.25)] shrink-0" id="search-trigger-btn">
+<span>Inspect Vault</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Quick Tabs Filter Rail -->
+<div class="flex items-center justify-between overflow-x-auto pt-2 pb-1 gap-2 border-b border-outline-variant/30 scrollbar-none">
+<div class="flex items-center gap-2 shrink-0" id="quick-tabs">
+<button class="quick-tab active px-3.5 py-1.5 rounded-full font-technical-label text-technical-label uppercase transition-all bg-primary text-on-primary font-semibold" data-filter="all">
+              All Timepieces (28)
+            </button>
+<button class="quick-tab px-3.5 py-1.5 rounded-full font-technical-label text-technical-label uppercase transition-all bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface" data-filter="immediate">
+              Immediate Allocation (14)
+            </button>
+<button class="quick-tab px-3.5 py-1.5 rounded-full font-technical-label text-technical-label uppercase transition-all bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface" data-filter="rolex">
+              Rolex Vault (9)
+            </button>
+<button class="quick-tab px-3.5 py-1.5 rounded-full font-technical-label text-technical-label uppercase transition-all bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface" data-filter="aurelia">
+              Aurelia &amp; Cie (6)
+            </button>
+<button class="quick-tab px-3.5 py-1.5 rounded-full font-technical-label text-technical-label uppercase transition-all bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface" data-filter="complications">
+              Grand Complications (8)
+            </button>
+<button class="quick-tab px-3.5 py-1.5 rounded-full font-technical-label text-technical-label uppercase transition-all bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface" data-filter="gold">
+              Precious Gold (12)
+            </button>
+</div>
+<div class="hidden xl:flex items-center gap-3 shrink-0 text-outline font-technical-label text-[11px] uppercase">
+<span class="flex items-center gap-1 text-primary"><span class="material-symbols-outlined text-[14px]">shield</span> 100% Authenticated</span>
+<span>•</span>
+<span>Direct Geneva Dispatch</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Marketplace Workspace: Faceted Sidebar + Product Grid -->
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-8 w-full animate-fade-up">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- ================= LEFT COLUMN: FACETED FILTERS (Chrono24 Precision) ================= -->
+<aside class="lg:col-span-3 bg-surface-container-lowest rounded-lg p-5 border border-outline-variant/40 space-y-6 shadow-xl sticky top-28">
+<!-- Active Filter Pills & Reset -->
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<h3 class="font-technical-label text-technical-label uppercase font-bold text-on-surface tracking-wider">Parameters</h3>
+</div>
+<button class="font-caption-caps text-caption-caps text-primary hover:underline uppercase" id="reset-all-filters">Reset All</button>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-3" id="active-pills-container">
+<span class="active-pill inline-flex items-center gap-1 px-2 py-1 bg-surface-container-high text-on-surface rounded text-caption-caps font-caption-caps uppercase">
+              Rolex <span class="material-symbols-outlined text-[12px] cursor-pointer hover:text-error" onclick="removeFacetPill(this)">close</span>
+</span>
+<span class="active-pill inline-flex items-center gap-1 px-2 py-1 bg-surface-container-high text-on-surface rounded text-caption-caps font-caption-caps uppercase">
+              New / Unworn <span class="material-symbols-outlined text-[12px] cursor-pointer hover:text-error" onclick="removeFacetPill(this)">close</span>
+</span>
+<span class="active-pill inline-flex items-center gap-1 px-2 py-1 bg-surface-container-high text-on-surface rounded text-caption-caps font-caption-caps uppercase">
+              Geneva FreePort <span class="material-symbols-outlined text-[12px] cursor-pointer hover:text-error" onclick="removeFacetPill(this)">close</span>
+</span>
+</div>
+</div>
+<!-- Facet: Brand Filter -->
+<div class="space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="font-caption-caps text-caption-caps uppercase text-outline font-semibold tracking-wider">Manufacture / Brand</span>
+<span class="text-caption-caps text-outline">5</span>
+</div>
+<div class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<label class="flex items-center justify-between cursor-pointer hover:text-on-surface">
+<span class="flex items-center gap-2.5">
+<input checked="" class="brand-checkbox accent-primary rounded bg-surface-container border-outline-variant w-4 h-4" type="checkbox" value="rolex"/>
+<span>Rolex</span>
+</span>
+<span class="font-technical-label text-[11px] text-outline">(9)</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-on-surface">
+<span class="flex items-center gap-2.5">
+<input class="brand-checkbox accent-primary rounded bg-surface-container border-outline-variant w-4 h-4" type="checkbox" value="aurelia"/>
+<span>Aurelia &amp; Cie Genève</span>
+</span>
+<span class="font-technical-label text-[11px] text-primary font-medium">(6)</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-on-surface">
+<span class="flex items-center gap-2.5">
+<input class="brand-checkbox accent-primary rounded bg-surface-container border-outline-variant w-4 h-4" type="checkbox" value="patek"/>
+<span>Patek Philippe</span>
+</span>
+<span class="font-technical-label text-[11px] text-outline">(5)</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-on-surface">
+<span class="flex items-center gap-2.5">
+<input class="brand-checkbox accent-primary rounded bg-surface-container border-outline-variant w-4 h-4" type="checkbox" value="ap"/>
+<span>Audemars Piguet</span>
+</span>
+<span class="font-technical-label text-[11px] text-outline">(4)</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-on-surface">
+<span class="flex items-center gap-2.5">
+<input class="brand-checkbox accent-primary rounded bg-surface-container border-outline-variant w-4 h-4" type="checkbox" value="omega"/>
+<span>Omega Master Chronometer</span>
+</span>
+<span class="font-technical-label text-[11px] text-outline">(4)</span>
+</label>
+</div>
+</div>
+<!-- Facet: Price Range Filter -->
+<div class="space-y-3 pt-4 border-t border-outline-variant/30">
+<div class="flex items-center justify-between">
+<span class="font-caption-caps text-caption-caps uppercase text-outline font-semibold tracking-wider">Valuation (USD)</span>
+<span class="font-technical-label text-technical-label text-primary" id="price-range-display">$10k – $150k+</span>
+</div>
+<input class="w-full h-1 bg-surface-container-high rounded appearance-none cursor-pointer accent-primary" id="price-range-slider" max="200000" min="10000" step="5000" type="range" value="150000"/>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-low px-2.5 py-1.5 rounded border border-outline-variant/40">
+<span class="block font-caption-caps text-[9px] text-outline uppercase">Min</span>
+<span class="font-technical-label text-technical-label text-on-surface">$10,000</span>
+</div>
+<div class="bg-surface-container-low px-2.5 py-1.5 rounded border border-outline-variant/40">
+<span class="block font-caption-caps text-[9px] text-outline uppercase">Max</span>
+<span class="font-technical-label text-technical-label text-on-surface" id="max-price-badge">$150,000</span>
+</div>
+</div>
+</div>
+<!-- Facet: Chronometer Condition -->
+<div class="space-y-2.5 pt-4 border-t border-outline-variant/30">
+<span class="font-caption-caps text-caption-caps uppercase text-outline font-semibold tracking-wider">Condition Grade</span>
+<div class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<label class="flex items-center justify-between cursor-pointer hover:text-on-surface">
+<span class="flex items-center gap-2">
+<input checked="" class="accent-primary" name="condition" type="radio"/>
+<span>New / Unworn (Factory Seals)</span>
+</span>
+<span class="font-technical-label text-[11px] text-outline">(18)</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-on-surface">
+<span class="flex items-center gap-2">
+<input class="accent-primary" name="condition" type="radio"/>
+<span>Pristine Mint (Complete Set)</span>
+</span>
+<span class="font-technical-label text-[11px] text-outline">(7)</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer hover:text-on-surface">
+<span class="flex items-center gap-2">
+<input class="accent-primary" name="condition" type="radio"/>
+<span>Horologist Serviced (Like New)</span>
+</span>
+<span class="font-technical-label text-[11px] text-outline">(3)</span>
+</label>
+</div>
+</div>
+<!-- Facet: Case Material -->
+<div class="space-y-2.5 pt-4 border-t border-outline-variant/30">
+<span class="font-caption-caps text-caption-caps uppercase text-outline font-semibold tracking-wider">Metal &amp; Alloy</span>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="material-btn active text-left px-2.5 py-1.5 rounded bg-primary/10 border border-primary/40 text-primary font-technical-label text-[11px] uppercase">Oystersteel</button>
+<button class="material-btn text-left px-2.5 py-1.5 rounded bg-surface-container-low border border-outline-variant/30 text-on-surface-variant hover:text-on-surface font-technical-label text-[11px] uppercase">18k Yellow Gold</button>
+<button class="material-btn text-left px-2.5 py-1.5 rounded bg-surface-container-low border border-outline-variant/30 text-on-surface-variant hover:text-on-surface font-technical-label text-[11px] uppercase">18k Everose</button>
+<button class="material-btn text-left px-2.5 py-1.5 rounded bg-surface-container-low border border-outline-variant/30 text-on-surface-variant hover:text-on-surface font-technical-label text-[11px] uppercase">Platinum 950</button>
+</div>
+</div>
+<!-- Facet: Scope of Delivery -->
+<div class="space-y-2 pt-4 border-t border-outline-variant/30 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-caption-caps text-caption-caps uppercase text-outline font-semibold tracking-wider">Scope of Delivery</span>
+<label class="flex items-center gap-2 cursor-pointer hover:text-on-surface">
+<input checked="" class="accent-primary rounded bg-surface-container w-4 h-4" type="checkbox"/>
+<span>Original Box &amp; Official Papers (26)</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer hover:text-on-surface">
+<input class="accent-primary rounded bg-surface-container w-4 h-4" type="checkbox"/>
+<span>Green Seal / Poinçon Certificate (21)</span>
+</label>
+</div>
+<!-- Facet: Seller Tier -->
+<div class="p-3 bg-surface-container-low rounded border border-primary/20 space-y-2">
+<div class="flex items-center gap-2 text-primary font-technical-label text-technical-label uppercase">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Dealer Security</span>
+</div>
+<p class="text-caption-caps font-caption-caps text-outline uppercase leading-relaxed">
+            Only Swiss Registered Haute Salons and Audited Vaults Permitted.
+          </p>
+</div>
+</aside>
+<!-- ================= RIGHT COLUMN: SORT BAR + PRODUCT CATALOG ================= -->
+<section class="lg:col-span-9 flex flex-col gap-6">
+<!-- Controls Bar: Result Count, Sort, View Toggle -->
+<div class="bg-surface-container-lowest px-5 py-3.5 rounded-lg border border-outline-variant/40 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="font-technical-label text-technical-label text-primary font-bold" id="item-counter">6 OF 28 PIECES</span>
+<span class="text-outline-variant">|</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Certified In-Stock Allocations</span>
+</div>
+<div class="flex items-center gap-4">
+<!-- Sort dropdown -->
+<div class="flex items-center gap-2">
+<span class="font-technical-label text-technical-label text-outline uppercase">Sort:</span>
+<select class="bg-surface-container-low border border-outline-variant/40 rounded px-3 py-1 font-technical-label text-technical-label text-on-surface uppercase focus:outline-none focus:border-primary" id="sort-select">
+<option value="rarity">Curated by Rarity &amp; Prestige</option>
+<option value="price-desc">Price: Highest to Lowest</option>
+<option value="price-asc">Price: Lowest to Highest</option>
+<option value="newest">Newest Vault Ingestion</option>
+<option value="disparity">Market Disparity Index</option>
+</select>
+</div>
+<!-- View Layout Toggle -->
+<div class="flex items-center bg-surface-container-low rounded p-0.5 border border-outline-variant/40"><button aria-label="Grid View" class="p-1.5 rounded bg-surface-container text-primary border border-primary/30 transition-all" id="btn-view-grid" title="Grid View"><span class="material-symbols-outlined text-[20px] block">grid_view</span></button><button aria-label="Detailed List View" class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container/60 transition-all" id="btn-view-list" title="Detailed List View"><span class="material-symbols-outlined text-[20px] block">view_agenda</span></button></div>
+</div>
+</div>
+<!-- ================= PRODUCT CATALOG GRID ================= -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="listings-container">
+<!-- CARD 1: Rolex Cosmograph Daytona 40mm (Ref. 126500LN) -->
+<article class="watch-card group bg-surface-container-lowest rounded-lg border border-outline-variant/40 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg" data-brand="rolex" data-gold="false" data-price="32800">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden flex items-center justify-center p-6">
+<!-- Authenticity Badge -->
+<div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
+<span class="badge-shimmer px-2 py-0.5 bg-primary text-on-primary font-technical-label text-[10px] uppercase font-bold tracking-widest rounded">
+                  Immediate Allocation
+                </span>
+<span class="px-2 py-0.5 bg-surface-container-highest/90 text-on-surface font-technical-label text-[10px] uppercase rounded backdrop-blur">
+                  Geneva Escrow
+                </span>
+</div>
+<!-- Wishlist Heart -->
+<button class="wishlist-btn absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-container/70 backdrop-blur flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<!-- Image with smooth zoom -->
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Macro studio photograph of the Rolex Cosmograph Daytona Ref 126500LN Oystersteel with white dial, black ceramic Cerachrom tachymeter bezel, sub-dials, on dark reflective slate, professional luxury horology lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp6DxNFqdUgJKgY8-oV3VfNE38lXvK_odxp6Z2IwEicEih97vKXc5-54kip0xsmLZSnfVBJYt-Ob6RKcjyDGIFScSAW93mZkKnbwq0R59sY5vkoZ7lGwdanlpXryGRFlGCp6yzXDKtZT-pXsc0wWgyx-q3Pf32Tr-RhxOdCmr2uHAbvyFaMYbnDDtM0x0V-rQA0qcp_cO1uPzuDqA2KfGYTaHD_gfFNQ2HUsgtyqEt"/>
+<!-- Disparity Metric -->
+<div class="absolute bottom-3 right-3 bg-surface-container-high/90 border border-outline-variant/40 px-2 py-1 rounded text-right">
+<span class="block font-caption-caps text-[9px] text-outline uppercase">Disparity Index</span>
+<span class="font-technical-label text-[11px] text-primary font-bold">+117% vs MSRP</span>
+</div>
+</div>
+<!-- Card Specs & Information -->
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between text-outline font-technical-label text-[11px] uppercase mb-1">
+<span>Rolex</span>
+<span>Ref. 126500LN</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-medium group-hover:text-primary transition-colors">
+                  Cosmograph Daytona 40mm
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Oystersteel (904L) • White "Panda" Chromalight Dial • 2024 Unworn Factory Set
+                </p>
+<!-- Complication Chips -->
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Cal. 4131</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">72h Reserve</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Cerachrom Bezel</span>
+</div>
+</div>
+<!-- Seller Verification Micro-Badge -->
+<div class="pt-3 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-caption-caps text-[10px] text-outline uppercase">Salon Privé Rue du Rhône</span>
+</div>
+<div class="flex items-center text-primary text-xs">
+                  ★★★★★ <span class="text-outline text-[10px] ml-1">(48)</span>
+</div>
+</div>
+<!-- Price & Reserve CTA -->
+<div class="pt-2 flex items-end justify-between">
+<div>
+<span class="block font-caption-caps text-[9px] text-outline uppercase tracking-wider">Escrow Price</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold price-value" data-chf="29500" data-eur="30800" data-usd="32800">$32,800</span>
+<span class="font-technical-label text-technical-label text-outline uppercase">USD</span>
+</div>
+</div>
+<button class="reserve-btn bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-[11px] uppercase tracking-widest px-4 py-2.5 rounded font-semibold transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Reserve</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 2: Rolex Submariner Date 41mm (Ref. 126610LN) -->
+<article class="watch-card group bg-surface-container-lowest rounded-lg border border-outline-variant/40 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg" data-brand="rolex" data-gold="false" data-price="10250">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden flex items-center justify-center p-6">
+<div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
+<span class="px-2 py-0.5 bg-surface-container-highest/90 text-on-surface font-technical-label text-[10px] uppercase rounded backdrop-blur">
+                  Swiss Dispatch 24H
+                </span>
+<span class="px-2 py-0.5 bg-primary/20 text-primary font-technical-label text-[10px] uppercase rounded border border-primary/30">
+                  Full Green Seal
+                </span>
+</div>
+<button class="wishlist-btn absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-container/70 backdrop-blur flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Refined close-up photo of Rolex Submariner Date Ref 126610LN in stainless steel with deep black dial, cyclops date at 3 o'clock, unidirectional ceramic diver bezel, lying on slate stone with water droplet sheen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWGJkwmwXsGK4q_NZIVOHlB3Kz-QH4UyToreSrGy9NNBQw3OVjjhBf8Ip8aO_tUPwVTG8JX5gSRPemjpJ6YezaBavyVpUMj2UwDBdl14ykEWSaCXw569HL-u5PXjmLD01YlOwfY37S82Oq5qqWCPdBvWmz7_L5dBEnwojAMkshEwbymvgPhQZ3Sw-xUkVBdyRLtmslK3Kw3qUYjy-buuc4XkOU6-UXoo6Q9xze0zkh"/>
+<div class="absolute bottom-3 right-3 bg-surface-container-high/90 border border-outline-variant/40 px-2 py-1 rounded text-right">
+<span class="block font-caption-caps text-[9px] text-outline uppercase">Waterproof</span>
+<span class="font-technical-label text-[11px] text-on-surface">300m / 1,000ft</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between text-outline font-technical-label text-[11px] uppercase mb-1">
+<span>Rolex</span>
+<span>Ref. 126610LN</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-medium group-hover:text-primary transition-colors">
+                  Submariner Date 41mm
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Oystersteel (904L) • Gloss Black Dial • 2024 Pristine Mint Complete Collector Set
+                </p>
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Cal. 3235</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Glidelock Clasp</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Geneva FreePort</span>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-caption-caps text-[10px] text-outline uppercase">Atelier Horloger Genève</span>
+</div>
+<div class="flex items-center text-primary text-xs">
+                  ★★★★★ <span class="text-outline text-[10px] ml-1">(112)</span>
+</div>
+</div>
+<div class="pt-2 flex items-end justify-between">
+<div>
+<span class="block font-caption-caps text-[9px] text-outline uppercase tracking-wider">Escrow Price</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold price-value" data-chf="9200" data-eur="9600" data-usd="10250">$10,250</span>
+<span class="font-technical-label text-technical-label text-outline uppercase">USD</span>
+</div>
+</div>
+<button class="reserve-btn bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-[11px] uppercase tracking-widest px-4 py-2.5 rounded font-semibold transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Reserve</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 3: Rolex Day-Date 40 President (Ref. 228238) -->
+<article class="watch-card group bg-surface-container-lowest rounded-lg border border-outline-variant/40 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg" data-brand="rolex" data-gold="true" data-price="41500">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden flex items-center justify-center p-6">
+<div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
+<span class="px-2 py-0.5 bg-primary text-on-primary font-technical-label text-[10px] uppercase font-bold rounded">
+                  18k Yellow Gold
+                </span>
+<span class="px-2 py-0.5 bg-surface-container-highest/90 text-on-surface font-technical-label text-[10px] uppercase rounded backdrop-blur">
+                  Baguette Index
+                </span>
+</div>
+<button class="wishlist-btn absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-container/70 backdrop-blur flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Editorial horological portrait of Rolex Day-Date 40 President in solid 18k yellow gold Ref 228238, champagne dial with baguette diamond hour markers, fluted bezel, President bracelet, opulent studio warm rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyVN3IWCOl5wn6w8g93-RqNHiaCYac-_BDBM08JafD10JY7uOMCKItOitI81h6sPJiphPuArHwBeTFMCNXWpuoTPmQNdaXmYI8jzcLA-3HFrSH0he1Lfy0om2ofCOG33OlpqjJ3Hu0xChd30YIbsRQRgWpuoHeCGiiZUiEJhvaxzmjfx8tLrBBzK8T66i3PvqrdMdrFjX5CLISUzxZnl5kHLNjDcPfq6mPgBvhhJ9O"/>
+<div class="absolute bottom-3 right-3 bg-surface-container-high/90 border border-outline-variant/40 px-2 py-1 rounded text-right">
+<span class="block font-caption-caps text-[9px] text-outline uppercase">Weight</span>
+<span class="font-technical-label text-[11px] text-primary">204 Grams Aurum</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between text-outline font-technical-label text-[11px] uppercase mb-1">
+<span>Rolex</span>
+<span>Ref. 228238</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-medium group-hover:text-primary transition-colors">
+                  Day-Date 40 President
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Solid 18k Yellow Gold • Champagne Sunray Baguette Dial • 2024 Unworn Complete Set
+                </p>
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Cal. 3255</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Crownclasp</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Double Quick-Set</span>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-caption-caps text-[10px] text-outline uppercase">Banque Privée Horological Asset</span>
+</div>
+<div class="flex items-center text-primary text-xs">
+                  ★★★★★ <span class="text-outline text-[10px] ml-1">(29)</span>
+</div>
+</div>
+<div class="pt-2 flex items-end justify-between">
+<div>
+<span class="block font-caption-caps text-[9px] text-outline uppercase tracking-wider">Escrow Price</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold price-value" data-chf="37500" data-eur="38900" data-usd="41500">$41,500</span>
+<span class="font-technical-label text-technical-label text-outline uppercase">USD</span>
+</div>
+</div>
+<button class="reserve-btn bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-[11px] uppercase tracking-widest px-4 py-2.5 rounded font-semibold transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Reserve</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 4: Aurelia Chrono-Tourbillon Squelette (Ref. AU-8800-OR) -->
+<article class="watch-card group bg-surface-container-lowest rounded-lg border border-outline-variant/40 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg" data-brand="aurelia" data-gold="true" data-price="124000">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden flex items-center justify-center p-6">
+<div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
+<span class="badge-shimmer px-2 py-0.5 bg-primary text-on-primary font-technical-label text-[10px] uppercase font-bold rounded">
+                  Pièce Rare 04/25
+                </span>
+<span class="badge-shimmer px-2 py-0.5 bg-surface-container-highest/90 text-primary font-technical-label text-[10px] uppercase rounded backdrop-blur">
+                  Poinçon de Genève
+                </span>
+</div>
+<button class="wishlist-btn absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-container/70 backdrop-blur flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Exquisite macro shot of an openworked skeletonized flying tourbillon luxury wristwatch in 18k rose gold with hand-beveled bridges, exposed gear train, sapphire dial, Swiss haute horlogerie aesthetic, black obsidian background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHa64sNEexKzE37ypXpKX-eNu1gj9IoI3VhkZs6wHxtz6hIhqPq3dfF7RcKgJjc-l2dEbtskC3_6n7BS3e03gOyCkwGEvWh7mJFRF-G1BNHv10UfCsExN7uhsvGpfrJvYx_WMlAh-RUsxEvKtwEYMQ5ddl5YIWbDWtToUgxUCtaOHnfUIalYO7P3o9MyCH0MaMpBxi9ExNcYSY3wdmBeAsKgrevfQidBeIJbxwPK81"/>
+<div class="absolute bottom-3 right-3 bg-surface-container-high/90 border border-outline-variant/40 px-2 py-1 rounded text-right">
+<span class="block font-caption-caps text-[9px] text-outline uppercase">Escapement</span>
+<span class="font-technical-label text-[11px] text-primary">60s Flying Tourbillon</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between text-outline font-technical-label text-[11px] uppercase mb-1">
+<span>Aurelia &amp; Cie Genève</span>
+<span>Ref. AU-8800-OR</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-medium group-hover:text-primary transition-colors">
+                  Chrono-Tourbillon Squelette
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  18k Rose Gold 41mm • Fully Hand-Angled Openwork Dial • Calibre AU-8800 Manual
+                </p>
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Mono-Poussoir</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">80h Twin-Barrel</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Geneva FreePort</span>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-caption-caps text-[10px] text-outline uppercase">Aurelia Atelier Direct</span>
+</div>
+<div class="flex items-center text-primary text-xs">
+                  Master Watchmaker Direct
+                </div>
+</div>
+<div class="pt-2 flex items-end justify-between">
+<div>
+<span class="block font-caption-caps text-[9px] text-outline uppercase tracking-wider">Escrow Price</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold price-value" data-chf="112000" data-eur="116500" data-usd="124000">$124,000</span>
+<span class="font-technical-label text-technical-label text-outline uppercase">USD</span>
+</div>
+</div>
+<button class="reserve-btn bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-[11px] uppercase tracking-widest px-4 py-2.5 rounded font-semibold transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Reserve</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 5: Patek Philippe Nautilus (Ref. 5711/1R-001) -->
+<article class="watch-card group bg-surface-container-lowest rounded-lg border border-outline-variant/40 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg" data-brand="patek" data-gold="true" data-price="145000">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden flex items-center justify-center p-6">
+<div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
+<span class="px-2 py-0.5 bg-primary/20 text-primary font-technical-label text-[10px] uppercase rounded border border-primary/40">
+                  Museum Collector Grade
+                </span>
+<span class="px-2 py-0.5 bg-surface-container-highest/90 text-on-surface font-technical-label text-[10px] uppercase rounded backdrop-blur">
+                  Zurich Vault
+                </span>
+</div>
+<button class="wishlist-btn absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-container/70 backdrop-blur flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Photographic study of the iconic Patek Philippe Nautilus Ref 5711/1R in rose gold with chocolate brown horizontal embossed dial, porthole case design, integrated rose gold bracelet on dark textured granite" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8hpwVz4rxi3BVPyApIGQGxzZQhmxWkD8CdTDo8W73LqG35FAbDQbxvukCBkOnxz8pv6R0NYdW_sZ9vu-Khl_bO-zw7JmCGbBsYGdqGpiBuJUQYycU6Q9KTSiepGEDOTjw_hUg73t-zROAgXVTAyDB-Cj_bMYUNBlyYqVV_U-ki9xKbS4Sz3w_IIxdR-euE6e-NBuRZUwLaFYJHZshfl3voK4JXVSPLVMcBkvae-Lf"/>
+<div class="absolute bottom-3 right-3 bg-surface-container-high/90 border border-outline-variant/40 px-2 py-1 rounded text-right">
+<span class="block font-caption-caps text-[9px] text-outline uppercase">Heritage Archive</span>
+<span class="font-technical-label text-[11px] text-on-surface">Extract Confirmed</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between text-outline font-technical-label text-[11px] uppercase mb-1">
+<span>Patek Philippe</span>
+<span>Ref. 5711/1R-001</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-medium group-hover:text-primary transition-colors">
+                  Nautilus 40mm Rose Gold
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  18k Rose Gold • Chocolate Brown Sunburst Dial • Complete Double Sealed Box &amp; Papers
+                </p>
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Cal. 26-330 S C</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Patek Seal</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Vault Inspection</span>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-caption-caps text-[10px] text-outline uppercase">Salon Patek Genève Historic</span>
+</div>
+<div class="flex items-center text-primary text-xs">
+                  ★★★★★ <span class="text-outline text-[10px] ml-1">(34)</span>
+</div>
+</div>
+<div class="pt-2 flex items-end justify-between">
+<div>
+<span class="block font-caption-caps text-[9px] text-outline uppercase tracking-wider">Escrow Price</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold price-value" data-chf="131000" data-eur="136000" data-usd="145000">$145,000</span>
+<span class="font-technical-label text-technical-label text-outline uppercase">USD</span>
+</div>
+</div>
+<button class="reserve-btn bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-[11px] uppercase tracking-widest px-4 py-2.5 rounded font-semibold transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Reserve</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 6: Audemars Piguet Royal Oak 'Jumbo' (Ref. 16202ST) -->
+<article class="watch-card group bg-surface-container-lowest rounded-lg border border-outline-variant/40 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg" data-brand="ap" data-gold="false" data-price="78500">
+<div class="relative w-full aspect-square bg-surface-container-low overflow-hidden flex items-center justify-center p-6">
+<div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
+<span class="px-2 py-0.5 bg-surface-container-highest/90 text-on-surface font-technical-label text-[10px] uppercase rounded backdrop-blur">
+                  50th Anniversary
+                </span>
+<span class="px-2 py-0.5 bg-primary text-on-primary font-technical-label text-[10px] uppercase font-bold rounded">
+                  Bleu Nuit 50
+                </span>
+</div>
+<button class="wishlist-btn absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-container/70 backdrop-blur flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Detailed macro luxury photo of Audemars Piguet Royal Oak Jumbo Extra-Thin Ref 16202ST in stainless steel, iconic octagonal bezel with hexagonal white gold screws, Bleu Nuit Nuage 50 petite tapisserie dial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCrXN_4Wz4DkZ2cfD_RVGwJFZNKh1VH3FS9fOHLnH93enWC6xAbXfOAmAYxsqDYyAkfd_CQmfdBAg4u8_vUgkZ96mki8xR03C89a8r-eFfd0LyFW7rMbQlp7Pcqa1TH5233oiFV01BXP_pE4kBTRRRySGxZbDqmYWhfBSPyEMzFpsao5Jm2-dtz3Ob9p0TtnAKwrWxoa_8Zn97U17iFlwueIWNqQh_G-UUsotPZT8s"/>
+<div class="absolute bottom-3 right-3 bg-surface-container-high/90 border border-outline-variant/40 px-2 py-1 rounded text-right">
+<span class="block font-caption-caps text-[9px] text-outline uppercase">Profile Thickness</span>
+<span class="font-technical-label text-[11px] text-on-surface">8.1mm Ultra-Slim</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center justify-between text-outline font-technical-label text-[11px] uppercase mb-1">
+<span>Audemars Piguet</span>
+<span>Ref. 16202ST.OO.1240ST.01</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-medium group-hover:text-primary transition-colors">
+                  Royal Oak "Jumbo" Extra-Thin
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  39mm Stainless Steel • Petite Tapisserie Bleu Dial • 2023 Full Set Unworn
+                </p>
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Cal. 7121</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">55h Reserve</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-technical-label text-[10px] rounded uppercase">Anniversary Rotor</span>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-caption-caps text-[10px] text-outline uppercase">Geneva FreePort Escrow Tier 1</span>
+</div>
+<div class="flex items-center text-primary text-xs">
+                  ★★★★★ <span class="text-outline text-[10px] ml-1">(52)</span>
+</div>
+</div>
+<div class="pt-2 flex items-end justify-between">
+<div>
+<span class="block font-caption-caps text-[9px] text-outline uppercase tracking-wider">Escrow Price</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold price-value" data-chf="71000" data-eur="73800" data-usd="78500">$78,500</span>
+<span class="font-technical-label text-technical-label text-outline uppercase">USD</span>
+</div>
+</div>
+<button class="reserve-btn bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-[11px] uppercase tracking-widest px-4 py-2.5 rounded font-semibold transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Reserve</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination & Vault Registry Navigation -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-4 mt-4">
+<p class="font-caption-caps text-caption-caps text-outline uppercase">
+            Displaying Page 1 of 5 • Swiss FreePort Audited Inventory
+          </p>
+<div class="flex items-center gap-2 font-technical-label text-technical-label">
+<button class="px-3 py-1.5 rounded bg-surface-container text-outline hover:text-on-surface transition-colors disabled:opacity-40" disabled="">PREV</button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-bold">1</button>
+<button class="px-3 py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors">2</button>
+<button class="px-3 py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors">3</button>
+<button class="px-3 py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors">4</button>
+<button class="px-3 py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors">5</button>
+<button class="px-3 py-1.5 rounded bg-surface-container text-outline hover:text-on-surface transition-colors">NEXT</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- ================= LUXURY BUYER ESCROW GUARANTEE BANNER (Chrono24 Standard) ================= -->
+<section class="max-w-[1440px] mx-auto px-6 lg:px-12 py-12 w-full animate-fade-up">
+<div class="relative bg-surface-container-lowest rounded-xl p-8 lg:p-12 border border-primary/30 overflow-hidden shadow-2xl">
+<!-- Background subtle radial highlight -->
+<div class="absolute -right-24 -bottom-24 w-96 h-96 bg-primary/10 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+<div class="max-w-2xl space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<span class="font-caption-caps text-caption-caps uppercase text-primary tracking-[0.2em]">The Aurelia Escrow Trust Protocol</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            Institutional Buyer Protection Under Swiss Banking Oversight
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Your capital is deposited directly into client-segregated escrow accounts at Banque Privée Pictet &amp; Cie in Geneva. Funds are exclusively released to the verified seller only after you physically receive the piece and your independent master horologist signs off within the 72-hour inspection window.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 shrink-0">
+<button class="bg-primary hover:bg-primary-fixed text-on-primary font-technical-label text-technical-label px-6 py-3.5 rounded font-semibold uppercase tracking-widest transition-all shadow-[0_0_25px_rgba(242,202,80,0.3)]">
+            Review Escrow Protocol
+          </button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface font-technical-label text-technical-label px-6 py-3.5 rounded uppercase tracking-wider transition-colors border border-outline-variant/40">
+            Speak to Horological Counsel
+          </button>
+</div>
+</div>
+<!-- 3 Key Escrow Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 mt-8 border-t border-outline-variant/30">
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary font-technical-label text-technical-label uppercase font-semibold">
+<span class="material-symbols-outlined text-[20px]">loupe</span>
+<span>1. 40x Optical Verification</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Every movement undergoes physical tear-down inspection in Geneva by Poinçon-certified watchmakers before vault seal issuance.
+          </p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary font-technical-label text-technical-label uppercase font-semibold">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+<span>2. Armed Armored Transit</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Brink's armored air logistics with Lloyd's of London full-declared-value insurance until physical handover to your signature.
+          </p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary font-technical-label text-technical-label uppercase font-semibold">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+<span>3. Autonomous Dispute Redress</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Complete unconditional 14-day restitution if any non-original component or dial inconsistency is documented by an accredited atelier.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toast-container"></div>
+<!-- Interactive Script for Live Search, Filtering, Currency, and Vault Reservation -->
+<script>
+    (function initMarketplace() {
+      // 1. Currency Switching System
+      const currButtons = document.querySelectorAll('.curr-btn');
+      let currentCurrency = 'USD';
+
+      currButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currButtons.forEach(b => {
+            b.classList.remove('text-primary', 'font-semibold');
+            b.classList.add('text-outline');
+          });
+          btn.classList.add('text-primary', 'font-semibold');
+          btn.classList.remove('text-outline');
+
+          currentCurrency = btn.getAttribute('data-curr');
+          updateCurrencyDisplay();
+          showToast(`Display currency changed to ${currentCurrency}`);
+        });
+      });
+
+      function updateCurrencyDisplay() {
+        document.querySelectorAll('.watch-card').forEach(card => {
+          const priceEl = card.querySelector('.price-value');
+          if (!priceEl) return;
+          const labelEl = priceEl.nextElementSibling;
+          
+          if (currentCurrency === 'USD') {
+            const val = priceEl.getAttribute('data-usd');
+            priceEl.textContent = '$' + Number(val).toLocaleString();
+            labelEl.textContent = 'USD';
+          } else if (currentCurrency === 'CHF') {
+            const val = priceEl.getAttribute('data-chf');
+            priceEl.textContent = 'CHF ' + Number(val).toLocaleString();
+            labelEl.textContent = '';
+          } else if (currentCurrency === 'EUR') {
+            const val = priceEl.getAttribute('data-eur');
+            priceEl.textContent = '€' + Number(val).toLocaleString();
+            labelEl.textContent = 'EUR';
+          }
+        });
+      }
+
+      // 2. Global Real-time Search Filtering
+      const searchInput = document.getElementById('global-search-input');
+      const clearSearchBtn = document.getElementById('clear-search');
+      const watchCards = document.querySelectorAll('.watch-card');
+      const counterEl = document.getElementById('item-counter');
+
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim();
+        if (query.length > 0) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+        filterCards(query);
+      });
+
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearSearchBtn.classList.add('hidden');
+        filterCards('');
+      });
+
+      function filterCards(query) {
+        let visibleCount = 0;
+        watchCards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          if (text.includes(query)) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+        counterEl.textContent = `${visibleCount} OF 28 PIECES`;
+      }
+
+      // 3. Quick Tabs Filtering Rail
+      const quickTabs = document.querySelectorAll('.quick-tab');
+      quickTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          quickTabs.forEach(t => {
+            t.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+            t.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+          });
+          tab.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+          tab.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+
+          const filterType = tab.getAttribute('data-filter');
+          applyQuickFilter(filterType);
+        });
+      });
+
+      function applyQuickFilter(type) {
+        let count = 0;
+        watchCards.forEach(card => {
+          const brand = card.getAttribute('data-brand');
+          const isGold = card.getAttribute('data-gold') === 'true';
+
+          if (type === 'all') {
+            card.classList.remove('hidden');
+            count++;
+          } else if (type === 'rolex' && brand === 'rolex') {
+            card.classList.remove('hidden');
+            count++;
+          } else if (type === 'aurelia' && brand === 'aurelia') {
+            card.classList.remove('hidden');
+            count++;
+          } else if (type === 'gold' && isGold) {
+            card.classList.remove('hidden');
+            count++;
+          } else if (type === 'immediate') {
+            const hasImmediate = card.innerText.includes('Immediate Allocation');
+            card.classList.toggle('hidden', !hasImmediate);
+            if (hasImmediate) count++;
+          } else if (type === 'complications') {
+            const isComplication = brand === 'aurelia' || card.innerText.includes('Tourbillon') || card.innerText.includes('Nautilus');
+            card.classList.toggle('hidden', !isComplication);
+            if (isComplication) count++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+        counterEl.textContent = `${count} OF 28 PIECES`;
+      }
+
+      // 4. Price Slider
+      const priceSlider = document.getElementById('price-range-slider');
+      const maxPriceBadge = document.getElementById('max-price-badge');
+      const priceRangeDisplay = document.getElementById('price-range-display');
+
+      priceSlider.addEventListener('input', (e) => {
+        const val = Number(e.target.value);
+        maxPriceBadge.textContent = `$${val.toLocaleString()}`;
+        priceRangeDisplay.textContent = `$10k – $${(val / 1000).toFixed(0)}k`;
+
+        let count = 0;
+        watchCards.forEach(card => {
+          const cardPrice = Number(card.getAttribute('data-price') || 0);
+          if (cardPrice <= val) {
+            card.classList.remove('hidden');
+            count++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+        counterEl.textContent = `${count} OF 28 PIECES`;
+      });
+
+      // 5. Reserve to Vault Micro-interaction
+      document.querySelectorAll('.reserve-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const card = btn.closest('.watch-card');
+          const title = card.querySelector('h4').textContent.trim();
+          showToast(`Reserved "${title}" to Secure Vault Cart`);
+          btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">check</span><span>Allocated</span>`;
+          btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+
+          // Trigger badgePop on header vault indicator
+          const vaultLink = document.getElementById('header-vault-link');
+          if (vaultLink) {
+            vaultLink.classList.remove('badge-pop');
+            void vaultLink.offsetWidth;
+            vaultLink.classList.add('badge-pop');
+          }
+
+          setTimeout(() => {
+            btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">lock</span><span>Reserve</span>`;
+            btn.classList.remove('bg-tertiary-container', 'text-on-tertiary-container');
+          }, 3000);
+        });
+      });
+
+      // 6. Wishlist Toggle
+      document.querySelectorAll('.wishlist-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const icon = btn.querySelector('.material-symbols-outlined');
+          const isFavorited = btn.classList.toggle('text-error');
+          if (isFavorited) {
+            btn.classList.remove('text-outline');
+            icon.style.fontVariationSettings = "'FILL' 1";
+            showToast('Timepiece added to confidential collector wishlist');
+          } else {
+            btn.classList.add('text-outline');
+            icon.style.fontVariationSettings = "'FILL' 0";
+            showToast('Timepiece removed from wishlist');
+          }
+        });
+      });
+
+      // 7. View Grid / List Toggle
+      const gridBtn = document.getElementById('view-grid');
+      const listBtn = document.getElementById('view-list');
+      const productGrid = document.getElementById('product-grid');
+
+      listBtn.addEventListener('click', () => {
+        listBtn.classList.add('bg-surface-container', 'text-primary');
+        listBtn.classList.remove('text-outline');
+        gridBtn.classList.remove('bg-surface-container', 'text-primary');
+        gridBtn.classList.add('text-outline');
+
+        productGrid.classList.remove('xl:grid-cols-3', 'md:grid-cols-2');
+        productGrid.classList.add('grid-cols-1');
+        document.querySelectorAll('.watch-card').forEach(card => {
+          card.classList.add('md:flex-row');
+          const imgDiv = card.querySelector('.aspect-square');
+          if (imgDiv) {
+            imgDiv.classList.remove('w-full');
+            imgDiv.classList.add('md:w-80', 'shrink-0');
+          }
+        });
+      });
+
+      gridBtn.addEventListener('click', () => {
+        gridBtn.classList.add('bg-surface-container', 'text-primary');
+        gridBtn.classList.remove('text-outline');
+        listBtn.classList.remove('bg-surface-container', 'text-primary');
+        listBtn.classList.add('text-outline');
+
+        productGrid.classList.remove('grid-cols-1');
+        productGrid.classList.add('xl:grid-cols-3', 'md:grid-cols-2');
+        document.querySelectorAll('.watch-card').forEach(card => {
+          card.classList.remove('md:flex-row');
+          const imgDiv = card.querySelector('.aspect-square');
+          if (imgDiv) {
+            imgDiv.classList.add('w-full');
+            imgDiv.classList.remove('md:w-80', 'shrink-0');
+          }
+        });
+      });
+
+      // 8. Toast Helper
+      function showToast(message) {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = 'pointer-events-auto bg-surface-container-high text-on-surface border border-primary/40 px-4 py-3 rounded shadow-2xl flex items-center gap-3 text-body-sm font-body-sm backdrop-blur-md animate-fade-in';
+        toast.innerHTML = `
+          <span class="material-symbols-outlined text-primary text-[18px]">info</span>
+          <span>${message}</span>
+        `;
+        container.appendChild(toast);
+        setTimeout(() => {
+          toast.remove();
+        }, 3500);
+      }
+
+      window.removeFacetPill = function(el) {
+        const pill = el.closest('.active-pill');
+        if (pill) {
+          pill.remove();
+          showToast('Filter pill detached');
+        }
+      };
+
+      document.getElementById('reset-all-filters').addEventListener('click', () => {
+        document.getElementById('active-pills-container').innerHTML = '';
+        searchInput.value = '';
+        clearSearchBtn.classList.add('hidden');
+        watchCards.forEach(c => c.classList.remove('hidden'));
+        counterEl.textContent = '28 OF 28 PIECES';
+        showToast('All parameters restored to default');
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-primary/20 pt-16 pb-12"><div class="max-w-[1440px] mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-outline-variant/30"><div class="lg:col-span-2 space-y-4"><div class="flex items-center gap-3"><img alt="AURELIA &amp; CIE Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDWyoCrlAXoG3ohyeepdOX4PHIAbySNK-CsOj1IAOwFFrrcE2IudVr916zDNz6mPT0nPtLEMlDbPV9u-sE2ZECNXdagS1WljIS1_vHH_-ypSKNxdXMTQnPxqbskv_XPr6v2DgIQJzZMVMhE8m_z2zsHY-PxQR-Va_86muqUFSSZEHhmcflO92Qplxbuq521xy_aUujQdMt9kf5fMPidD0BoFUjxXA9-JAJoJgDKKiffVw"/><span class="font-title-editorial text-title-editorial uppercase tracking-[0.2em] text-on-surface">Aurelia &amp; Cie</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Haute Horlogerie Genève. Guardians of high-complication mechanical artistry, micro-architectural mastery, and hand-finished chronometry since 1888.</p><div class="pt-2 flex items-center gap-4"><div class="px-3 py-1 border border-primary/30 rounded bg-surface-container-low"><span class="font-technical-label text-technical-label text-primary">POINÇON DE GENÈVE ACCREDITED</span></div></div></div><div class="space-y-3"><h4 class="font-caption-caps text-caption-caps uppercase text-primary tracking-widest">Private Boutiques</h4><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li>Genève — Rue du Rhône 42</li><li>Zürich — Bahnhofstrasse 18</li><li>New York — Madison Avenue 740</li><li>Tokyo — Ginza 6-Chome</li><li>Dubai — The Dubai Mall Promenade</li></ul></div><div class="space-y-3"><h4 class="font-caption-caps text-caption-caps uppercase text-primary tracking-widest">Client Concierge</h4><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li>Private Horological Advisory</li><li>White-Glove Armored Transit</li><li>Calibre Restoration &amp; Service</li><li>Certificate of Authenticity</li><li class="font-technical-label text-technical-label text-primary pt-1">CONCIERGE: +41 22 819 9000</li></ul></div><div class="space-y-4"><h4 class="font-caption-caps text-caption-caps uppercase text-primary tracking-widest">Private Allocations</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Subscribe for discreet confidential notifications regarding numbered grand complication debuts.</p><div class="flex flex-col gap-2"><input class="bg-surface-container-low border border-outline-variant px-3 py-2 text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:border-primary" placeholder="Atelier Dossier Access Email" type="email"/><button class="bg-primary text-on-primary font-technical-label text-technical-label px-4 py-2.5 uppercase tracking-widest hover:bg-primary-fixed transition-colors text-center font-medium" type="button">Request Allocation</button></div></div></div><div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-on-surface-variant"><div class="flex items-center gap-6 font-technical-label text-technical-label uppercase text-outline"><span>Swiss Vault Escrow Protection</span><span>Lloyd's Insured Transit</span><span>Geneva Seal Horloger</span></div><p class="font-caption-caps text-caption-caps text-outline">© 2024 AURELIA &amp; CIE GENÈVE. ALL RIGHTS RESERVED.</p></div></div></footer>
+<script id="grid-list-toggle-handler">
+(function setupGridListToggle() {
+  const btnGrid = document.getElementById('btn-view-grid');
+  const btnList = document.getElementById('btn-view-list');
+  const container = document.getElementById('listings-container');
+  if (!btnGrid || !btnList || !container) return;
+
+  function setGridView() {
+    btnGrid.className = 'p-1.5 rounded bg-surface-container text-primary border border-primary/30 transition-all';
+    btnList.className = 'p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container/60 transition-all';
+    
+    container.className = 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6';
+    
+    const cards = container.querySelectorAll('.watch-card');
+    cards.forEach(card => {
+      card.className = 'watch-card group bg-surface-container-lowest rounded-lg border border-outline-variant/40 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-lg';
+      const imgWrapper = card.querySelector('.watch-img-wrapper') || card.children[0];
+      if (imgWrapper) {
+        imgWrapper.className = 'relative w-full aspect-square bg-surface-container-low overflow-hidden flex items-center justify-center p-6';
+      }
+      const contentWrapper = card.querySelector('.watch-info-wrapper') || card.children[1];
+      if (contentWrapper) {
+        contentWrapper.className = 'p-5 flex flex-col flex-1 justify-between gap-4';
+      }
+    });
+  }
+
+  function setListView() {
+    btnList.className = 'p-1.5 rounded bg-surface-container text-primary border border-primary/30 transition-all';
+    btnGrid.className = 'p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container/60 transition-all';
+    
+    container.className = 'flex flex-col gap-4';
+    
+    const cards = container.querySelectorAll('.watch-card');
+    cards.forEach(card => {
+      card.className = 'watch-card group bg-surface-container-lowest rounded-lg border border-outline-variant/40 hover:border-primary/50 transition-all duration-300 flex flex-col md:flex-row items-stretch overflow-hidden shadow-lg';
+      const imgWrapper = card.querySelector('.watch-img-wrapper') || card.children[0];
+      if (imgWrapper) {
+        imgWrapper.className = 'relative w-full md:w-56 md:min-w-[220px] aspect-square md:aspect-auto bg-surface-container-low overflow-hidden flex items-center justify-center p-4 shrink-0';
+      }
+      const contentWrapper = card.querySelector('.watch-info-wrapper') || card.children[1];
+      if (contentWrapper) {
+        contentWrapper.className = 'p-5 flex flex-col md:flex-row flex-1 justify-between items-start md:items-center gap-4';
+      }
+    });
+  }
+
+  btnGrid.addEventListener('click', setGridView);
+  btnList.addEventListener('click', setListView);
+})();
+</script>
+<script id="quiet-luxury-scroll-handler">
+(function setupHeaderScroll() {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  function onScroll() {
+    if (window.scrollY > 24) {
+      header.classList.add('header-scrolled');
+    } else {
+      header.classList.remove('header-scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script></body></html>
